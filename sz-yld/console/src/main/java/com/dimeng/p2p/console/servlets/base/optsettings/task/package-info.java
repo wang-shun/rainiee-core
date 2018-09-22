@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_BASE_OPTSETTINGS_TASK", name = "定时任务管理", parentId = "P2P_C_BASE_OPTSETTINGS", order = 8)
+package com.dimeng.p2p.console.servlets.base.optsettings.task;

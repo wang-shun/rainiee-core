@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_BASE_MALLOPTSETTINGS_CATEGORY", name = "商品类别设置" ,parentId="P2P_C_BASE_MALLOPTSETTINGS" ,order = 4)
+package com.dimeng.p2p.console.servlets.base.malloptsettings.category;

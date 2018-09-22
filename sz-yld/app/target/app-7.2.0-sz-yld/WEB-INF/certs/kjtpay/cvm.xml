@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312"?>
+<CVMConfig>
+	<CRLContext>
+		<RetryPolicy>0,10</RetryPolicy>
+		<NotCheckCRL>true</NotCheckCRL>
+		<CaFileName>cafiles/ca.cer</CaFileName>
+		<CrlUrl>http://ca.kjtpay.com:8080/topca/public/itruscrl?CA=7C2FE69E2A859504135CBAE4AAEB78CBE94A1B12</CrlUrl>
+	</CRLContext>
+
+	
+</CVMConfig>

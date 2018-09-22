@@ -1,0 +1,32 @@
+<div class="bc-withe fn-s-14" id="goodsList" >
+	  <%for( var i = 0; i<list.length; i++){%>
+		<div class="ub bd-t pd-all-8" goodsId = "<%=list[i].id%>">
+			<div class="mallproduct" style='<%=list[i].image?"background-image:url("+list[i].image+")":""%>'></div>
+			<div class="ub ub-ver pd-l-10 ub-f1">
+				<div class="ub t-3"><%=list[i].name%></div>
+				<%if(list[i].marketPrice !=0 || list[i].marketPrice !=''){%>
+				<div class="ub ub-ac ub-f1" style="text-decoration: line-through;">
+						市场价：<%=DMJS.CommonTools.formatMoneyNumber(list[i].marketPrice)%>
+				</div>
+				<%}else{%>
+					<div class="ub ub-ac ub-f1" style="padding:1rem;">
+				</div>
+				<%}%>
+			    <div class="ub ub-ac">		
+					<div class="fn-c-org ub-f1">
+				<%if(data.data.allowsBalance && list[i].isCanMoney=='yes'){%>
+					   <span>¥<%=DMJS.CommonTools.formatMoneyNumber(list[i].amount)%></span>
+					   <%if(list[i].isCanScore=='yes' &&　list[i].score){%>
+					   	    <span>/</span><span><%=list[i].score%>积分</span>
+					   <%}%>
+		        <%}else{%>
+		        	<span><%=list[i].score%>积分</span>
+		        	<%}%>
+					</div>
+					<div class="t-a">已成交<%=list[i].dealNum%>笔</div>
+				</div>
+			</div>
+		</div>
+       <%}%>
+	
+</div>

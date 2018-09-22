@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Review id="20160225富友托管代码review">
+  <ReviewIssue id="IL34LE6M">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-26 :: 11:14:57:934 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:01:21:770 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="56">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/AbstractDzglServlet.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>为被使用的方法</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL34OM98">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-26 :: 11:17:28:364 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:28:28:392 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="108">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/ChargeWithdrawQuery.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>常量都可以通过trimBlank方法去掉空格，避免配置的时候添加了空格，导致配置错误</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL35B8PS">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-26 :: 11:35:03:904 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:26:29:371 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="402">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/QueryManageImpl.java</File>
+    <Type>item.type.label.programLogic</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>为什么订单状态修改为成功，描述又为对账异常？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL35D87V">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-26 :: 11:36:36:571 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:26:22:509 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="407">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/QueryManageImpl.java</File>
+    <Type>item.type.label.irrelevant</Type>
+    <Severity>item.severity.label.major</Severity>
+    <Summary>对账完成后只修改订单状态，不进行资金操作？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL35UKAY">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-26 :: 11:50:05:386 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:17:27:809 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="78">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/ChargeWithdrawQuery.java</File>
+    <Type>item.type.label.irrelevant</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>为什么后台充值直接修改订单状态就可以了？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL7RDCTN">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-29 :: 17:03:38:795 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:00:51:099 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="54">src/main/java/com/dimeng/p2p/escrow/fuyou/util/HttpClientHandler.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>打印请求路径和请求参数，进行异常捕获</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL7RK370">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-29 :: 17:08:52:908 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:13:56:145 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="35">src/main/java/com/dimeng/p2p/escrow/fuyou/task/AdvanceTask.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>未被使用的类</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL7V6FL3">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-29 :: 18:50:14:247 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:00:44:666 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="66">src/main/java/com/dimeng/p2p/escrow/fuyou/face/BankQueryFace.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.trivial</Severity>
+    <Summary>打印返回数据</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9A208X">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:34:28:161 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:34:50:682 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="19">src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouBankcard.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>添加类描述</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9A6X3N">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:38:17:363 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:33:25:112 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="102">src/main/java/com/dimeng/p2p/pay/servlets/fuyou/WithdrawInform.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>日志级别应设置为error级别</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9A8ZDM">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:39:53:626 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:32:53:275 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="123">src/main/java/com/dimeng/p2p/pay/servlets/fuyou/WithdrawInform.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>使用log打印日志</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9AD8O6">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:43:12:294 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:32:08:157 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="532">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>优化sql，可以直接使用UPDATE S65.T6503 SET F05 = F04 where F01=?;替换这两个sql</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9AESXV">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:44:25:219 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:08:50:774 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="564">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>优化sql，可以直接使用UPDATE S65.T6502 SET F05 = F04 where F01=?;替换这两个sql</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9AIQ90">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:47:28:356 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 19:35:03:680 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="880">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java</File>
+    <Type>item.type.label.irrelevant</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>不明白为啥会有这种查询</Summary>
+    <Description></Description>
+    <Annotation>根据实际情况修改</Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.unsureValidity</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9CZ2JU">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:56:10:026 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:18:19:273 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="970">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>传了connection，但没有使用</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9D11JK">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:57:42:032 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:17:23:043 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="1013">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>描述不符</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9D3NHC">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:59:43:776 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:04:04:813 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="1094">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.critical</Severity>
+    <Summary>在表被锁定的情况下能进行修改操作？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9D5DME">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 20:01:04:310 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:01:50:851 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="1002">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>是不是能直接使用充值execute</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9DP4OH">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 20:16:25:841 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:59:41:187 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="426">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/PublicManageImpl.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>循环处理的内容没有加事物控制</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="ILA4P4HI">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 08:52:15:222 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:17:03:025 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="22">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/CzdzList.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>双乾的？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="ILA4XFQG">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 08:58:43:048 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:57:12:514 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>邓文武</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="80">src/main/java/com/dimeng/p2p/console/servlets/fuyou/FyouLoan.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>是否需要先提交事物</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+</Review>

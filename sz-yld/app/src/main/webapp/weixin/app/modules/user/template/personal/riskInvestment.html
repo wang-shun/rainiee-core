@@ -1,0 +1,40 @@
+<div>
+<ul class="list-type1 " id='Janswer'>
+	<%for(var i=0;i<data.length;i++){%>
+		<li>
+			<input type="hidden" class="uhide JoptionAnswer" title="第<%=i+1%>题" validator="notEmpty;">
+			<dl class="mc  ub JanswerId" questionId='<%=data[i].questionId%>'>
+				<dt><%=i+1%>.</dt>
+				<dd class="ub-f1 "><%=data[i].question%></dd>
+			</dl>
+			
+			<div class="mt ub Joption " Joption='A'>
+				<p>A：</p>
+				<p class="ub-f1 lmg-r-25"  ><%=data[i].answerA%></p>
+				
+			</div>
+			<div class="mt ub Joption" Joption='B'>
+				<p>B：</p>
+				<p class="ub-f1 lmg-r-25"><%=data[i].answerB%></p>
+				
+			</div>
+			<div class="mt ub Joption" Joption='C'>
+				<p>C：</p>
+				<p class="ub-f1 lmg-r-25"><%=data[i].answerC%></p>
+				
+			</div>
+			<div class="mt ub Joption" Joption='D'>
+				<p>D：</p>
+				<p class="ub-f1 lmg-r-25"><%=data[i].answerD%></p>
+				
+			</div>
+		</li>
+	<%}%>
+</ul>
+
+<div class="ub ub-f1 tab45" action='action:submit' style="width: 90%;margin: 1rem auto 1rem; border-radius: 5rem;">
+	<div class="pos_re ub-f1 c-red sc-wid1" >
+		<div class=" ub ub-pc ub-ac ub-f1 t-wh ulev-app20 lin-hei27">立即评估</div>
+	</div>
+</div>
+</div>

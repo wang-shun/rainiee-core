@@ -1,0 +1,99 @@
+@charset "utf-8";
+body{padding: 0 ;margin: 0;}
+@media screen  and (min-width:0px)   and (max-width:240px){
+				body{font-size:xx-small;}
+				html{font-size: 9px;}
+			}
+			@media screen  and (min-width:241px) and (max-width:384px){
+				body{font-size:x-small;}
+				html{font-size: 11px;}
+			}
+			@media screen  and (min-width:385px) and (max-width:480px){
+				body{font-size:small;}
+				html{font-size: 13px;}
+			}
+			@media screen  and  (min-width:481px) and (max-width:640){
+				body{font-size:medium;}
+				html{font-size: 16px;}
+			}
+			@media screen  and  (min-width:640px) {
+				body{font-size:large;}
+				html{font-size: 19px;}
+			}
+.list-type1{
+	font-family: "微软雅黑";
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.list-type1 .mc{
+	    border-bottom: 1px solid #EAE6E6;
+	    background-color: #F8F8F8;
+	    line-height: 2rem;
+	    font-size: 1.4rem;
+	    padding: 0.5rem;
+	    letter-spacing: 0.1rem;
+	}
+.list-type1 .mt{
+	    border-bottom: 1px solid #EAE6E6;
+	
+	  line-height: 2rem;
+	    font-size: 1.3rem;
+	    padding: 0.5rem;
+	    letter-spacing: 0.1rem;
+	}
+.xins-jl{    -webkit-transform: rotate(45deg);
+    margin-top: 0.4rem;
+    font-size: 1.1rem;
+    margin-left: 0.4rem;}
+.lfxpg{
+	
+	top: 2rem;
+    left: 0;
+	}
+.ub-f1
+{
+	
+	-webkit-box-flex: 1; 
+	box-flex: 1;
+}
+.tab45
+{
+	height:4.5rem;
+}
+.ulev-app20{
+	font-size:2rem;
+}
+.ub {
+    display: -webkit-box !important;
+    display: box !important;
+    position: relative;
+}
+
+.ub-ac {
+	-webkit-box-align: center;
+	box-align: center;
+}
+
+.ub-pc {
+	-webkit-box-pack: center;
+	box-pack: center;
+}
+
+.btn{
+	    width: 83%;
+    background-color: #34B8FC;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+dd,dl,dt{padding:0;margin:0;}   
+.lmg-r-20{
+margin-right:2rem
+}
+
+.lfx-gou{background:url('../image/icon_gou.png') no-repeat right center; background-origin: content-box; background-size: 10%;}

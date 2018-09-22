@@ -1,0 +1,71 @@
+
+<div class="bg-c-gray hei-inherit" >
+	<div class="donation-tl ub">
+		<div class="img-icon8"></div>
+		<div class="line-h-25">剩余可投金额(元)</div>
+	</div>
+	<div class="donation-ct">
+		<%=fmoney((remainAmount*1).toFixed(2)*1)%><span class="fn-s-12">元</span>
+	</div>
+	<div class="donation-ft">
+		<font class="fn-c">账户余额:&nbsp;</font><span class="fn-c-org"><%=fmoney((overAmount*1).toFixed(2)*1)%></span><font class="fn-s-12">元</font>
+	</div>
+	<div class="donation-inp ub b-bottom">
+		<div class="line-h-28 ">投资金额：</div>
+		<div>
+			&nbsp;&nbsp;<input autocomplete="off" placeholder="起投金额:￥<%=bidDetailData.minBidingAmount%>元" validator="notEmpty;" type="number" title="投资金额" name="amount" id="amount" />
+		</div>
+	</div>
+	<%if(!(bidDetailData.isXsb=="true" || bidDetailData.isJlb=="true")){%>
+	<div class="donation-inp ub b-bottom ub-ac" id='JlList'>
+		<div class="line-h-28 ">使用奖励：</div>&nbsp;&nbsp;
+		<div id='selectReward' class="line-h-28 ulev-app14 ub-f1">请选择奖励 <div class="img-select" style='position: absolute;top: 1rem;right: 0.5rem;'></div></div>
+        
+		<select class="uhide" id='select_selectReward'>
+			<option>使用奖励</option>
+			<option>不使用奖励</option>
+		</select>
+	</div>
+	<%}%>
+	<div class="donation-inp ub b-bottom">
+		<div class="line-h-28 ">预期收益：&nbsp;&nbsp;<span id="expectedRate">0.00</span>元</div>
+
+	</div>
+
+	<div class="donation-inp ub b-bottom " >
+		<div class="line-h-28 ">交易密码：</div>
+		<div>
+			&nbsp;&nbsp;<input placeholder="请输入交易密码" autocomplete="off" name="tranPwd" title="交易密码" id="tranPwd" validator="notEmpty;" value="" type="password" maxlength="20" class="uc-a02">
+		</div>
+	</div>
+	<div class="ub umar-a2 ub-ac"  id="agreementFlag">
+
+            <input type="checkbox"  class="uhide" title="请阅读风险提示函、借款协议" validator="checked;" id="autid">
+
+            <div  class="ub t-bla ub-f1" style="width:7.5rem">
+                <div action="action:turnRememberRido"  class="che-icon ub-img umhw2"></div>
+                <div class="ub-f1 ut-s tx-l t-gra ub ub-ac fn-s-12" style=" margin-left:.5rem;"  ><label for="autid">我已阅读并同意</label>
+                	<%if(isShowFXTS=='true'){%>
+                	<div id="fxtsh" class="ub">《<div class="lc_red"  action="action:agreement['FXTSH']">风险提示函</div>》</div>
+                	<%}%>
+                	<div id="jkxy" class="ub">《<div class="lc_red"  action="action:agreement['JK']">借款协议</div>》</div></div>
+            </div>
+    </div>
+	<div class="ub ub-pc mg-t-20 fn-s-15" id='buyBid' >
+		<div class="width98 tx-al-c pd-bt-10 radius bg-c-blue fn-c-white" >马上支付</div>
+	</div>
+	
+	<input type='hidden' value="<%=bidid%>" name='bidId' />
+	<input type='hidden' name='userReward' value="" id='userReward' />
+	<!--是否使用我的奖励   有值则为使用-->
+	<input type='hidden' name='myRewardType' value="" id='myRewardType' />
+	<!--experience:体验金 |hb:红包|jxq:加息券-->
+	<input type='hidden' name='hbRule' value="" id='hbRule' />
+	<!--红包id-->
+	<input type='hidden' name='jxqRule' value="" id='jxqRule' />
+	<!--加息券id-->
+	<input type='hidden'  value="" id='userRewardAmount' />
+	<!--使用奖励减多少金额-->
+	<input type='hidden'  value="" id='userRewardRule' />
+	<!--奖励使用规则-->
+</div>

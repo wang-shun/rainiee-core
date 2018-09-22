@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.dimeng.p2p.sz-yld.modules</groupId>
+		<artifactId>nciic</artifactId>
+		<version>7.2.0</version>
+	</parent>
+	<artifactId>nciic-zcxyzx-service</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>com.dimeng.p2p.sz-yld</groupId>
+			<artifactId>common</artifactId>
+			<version>7.2.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache</groupId>
+		  <artifactId>cxf-all</artifactId>
+		  <version>2.7.8</version>
+		</dependency>
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.3</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.ws.xmlschema</groupId>
+		  <artifactId>xmlschema-core</artifactId>
+		  <version>2.2.1</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.xbean</groupId>
+		  <artifactId>xbean-spring</artifactId>
+		  <version>3.4</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.neethi</groupId>
+		  <artifactId>neethi</artifactId>
+		  <version>3.0.2</version>
+		</dependency>
+		<dependency>
+		  <groupId>asm</groupId>
+		  <artifactId>asm</artifactId>
+		  <version>3.1</version>
+		</dependency>
+		<dependency>
+  <groupId>asm</groupId>
+  <artifactId>asm-commons</artifactId>
+  <version>3.1</version>
+</dependency>
+
+<dependency>
+  <groupId>dom4j</groupId>
+  <artifactId>dom4j</artifactId>
+  <version>1.6.1</version>
+</dependency>
+<dependency>
+  <groupId>org.codehaus.woodstox</groupId>
+  <artifactId>stax2-api</artifactId>
+  <version>3.1.1</version>
+</dependency>
+<dependency>
+  <groupId>org.codehaus.woodstox</groupId>
+  <artifactId>woodstox-core-asl</artifactId>
+  <version>4.2.0</version>
+</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>p2p-snapshots</id>
+			<url>http://localhost:8081/repository/p2p-snapshots/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>false</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>p2p-releases</id>
+			<url>http://localhost:8081/repository/p2p-releases/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

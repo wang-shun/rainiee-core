@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_ACCOUNT_JGXX", name = "机构信息" , parentId="P2P_C_ACCOUNT_HYGL" ,order = 3)
+package com.dimeng.p2p.console.servlets.account.vipmanage.jgxx;

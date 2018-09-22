@@ -1,0 +1,40 @@
+<%for(var i=0;i<list.length;i++){%>
+<div class="bc-withe"  style="margin-top:1rem;">
+		<div class="ub bd-t pd-all-8 ub-ver" >
+			<div class="t-3 hei-30 ub ub-ac bd-t">订单号：<%=list[i].orderId%></div>
+			<%for(var j=0;j<list[i].myOrderExtInfos.length;j++){%>
+			<div class="ub t-3 " style="margin: 1rem 0;" action="action:gotoOrderDetail[<%=list[i].myOrderExtInfos[j].orderId%>]">
+				<div class="mallproduct" style='<%=list[i].myOrderExtInfos[j].comdPicture?"background-image:url("+list[i].myOrderExtInfos[j].comdPicture+")":""%>;'></div>
+				<div class="ub ub-ver pd-l-10 ub-f1">
+					<div class="ub">
+						<div class="ub-f1"><%=list[i].myOrderExtInfos[j].comdName%></div>
+						<span class="fn-c-org"><%=list[i].myOrderExtInfos[j].status%></span>
+					</div>
+					
+					<div class="ub ub-ac ub-pe ub-f1">
+						<%if("score"==list[i].myOrderExtInfos[j].payment){%>
+							<%=list[i].myOrderExtInfos[j].score%>积分
+						<%}else{%>	
+							¥<%=list[i].myOrderExtInfos[j].price%>
+						<%}%>
+					</div>
+				    <div class="ub">		
+						<div class="ub ub-pe ub-f1">x<%=list[i].myOrderExtInfos[j].num%></div>
+					</div>
+				</div>
+			</div>
+			<%}%>
+		</div>
+		<!--共计-->
+		<div class="ub ub-ac hei-40">
+			<div class="ub width50 ub-pe">共<%=list[i].orderNum%>件商品</div>
+			<div class="ub fn-c-org width50 ub-pe" style="right: .8rem;">合计：
+				<%if("score"==list[i].payment){%>
+					<%=list[i].orderSumAmount%>积分
+				<%}else{%>	
+					¥<%=list[i].orderSumAmount%>
+				<%}%>
+			</div>
+		</div>
+	</div>
+<%}%>

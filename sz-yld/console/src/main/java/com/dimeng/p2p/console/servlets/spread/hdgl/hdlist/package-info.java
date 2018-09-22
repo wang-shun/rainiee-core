@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_SPREAD_HDGL_HDLIST", name = "活动列表" ,parentId ="P2P_C_SPREAD_HDGL" ,order = 1)
+package com.dimeng.p2p.console.servlets.spread.hdgl.hdlist;

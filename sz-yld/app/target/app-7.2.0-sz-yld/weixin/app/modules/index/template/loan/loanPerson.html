@@ -1,0 +1,111 @@
+<div class="bg-c-gray" style="padding: 1rem 1rem 2rem 1rem;">
+	<div >
+		 <div class="fn-c-org">提示:</div>
+		 <div>1.由于业务原因，<%=Config.base('appName')%>目前只支持全国部分城市的借款业务;</div>
+		 <div>2.请仔细填写您的真实信息，我们将与您取得联系;</div>
+	</div>
+	<div class="ub bc-withe pd-all-10 ub-b-border" style="margin-top:.5rem ;">
+		<div class=" fn-s-14 line-h-20">联系人：</div>
+		<div class="person-inp"><input validator="notEmpty;" title="联系人" placeholder="请输入联系人" name="contact" maxlength="32" /></div>
+	</div>
+	<div class="tx-al-r line-h-20">
+		不超过32个字
+	</div>
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-b-border">
+		<div class=" fn-s-14 line-h-20">手机号码：</div>
+		<div class="person-inp">
+
+			<input name="phoneNum" title="手机号码" type="tel" placeholder="请输入手机号码" validator="notEmpty;reg[/^(13|14|15|17|18)[0-9]{9}$/];" maxlength="11" />
+
+		</div>
+	</div>
+	
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-b-border">
+		<div class=" fn-s-14 line-h-20">意向借款金额：</div>
+		<div class="person-inp ub-f1"><input  class="width100" validator="notEmpty;Int;multiple[100]" placeholder="必须是100的倍数" title="意向借款金额" type="tel" name="loanAmount" maxlength="15"/></div>
+		<div class=" fn-s-14 line-h-20">元</div>
+	</div>
+	
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-b-border">
+		<div class=" fn-s-14 line-h-20">借款期限：</div>
+		<div class="person-inp ub-f1"><input   title="借款期限" validator="notEmpty;Int;val[1,24]" type="text" name="loanTerm" maxlength="2"  /></div>
+		<div class="fn-s-13">个月(1-24个月)</div>
+	</div>
+	
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-ac ub-pj ub-b-border">
+		<div class=" fn-s-14 line-h-20">借款类型：</div>
+		<div class="person-inp ub-f1 ub ub-pc ub-ac">
+		<div class="ub mg-lr-5">
+            <input type="checkbox"  class="uhide Jtype"  >
+            <div action="action:turnRememberRidoType"  class="ub t-bla ub-f1 ub-ac" >
+                <div class="che-icon ub-img umhw2"></div>
+                 <div>&nbsp;抵押</div>
+            </div>
+            
+        </div>
+        <div class="ub mg-lr-5">
+            <input type="checkbox"  class="uhide Jtype"  >
+            <div action="action:turnRememberRidoType"  class="ub t-bla ub-f1 ub-ac" >
+                <div class="che-icon ub-img umhw2"></div>
+                <div>&nbsp;实地认证</div>
+            </div>
+            
+        </div>
+        <div class="ub mg-lr-5">
+            <input type="checkbox"  class="uhide Jtype"  >
+            <div action="action:turnRememberRidoType"  class="ub t-bla ub-f1 ub-ac" >
+                <div class="che-icon ub-img umhw2"></div>
+                <div>&nbsp;担保</div>
+            </div>
+             
+        </div>
+		</div>
+		
+	</div>
+	<div class="ub  pd-bt-10 fn-s-14 t-6 mg-t-5">
+							<div class="width25 fn-s-14 pd-l-10">所在城市</div>
+							
+								<div class=" width22 ">
+										<div id="selectProvince" data="" class="fn-c" >请选择</div>
+										<div class="lsj lsj2"></div>
+								</div>
+								<div class="width22  mg-l-b2">
+										<div  id="selectCity" class="fn-c " >请选择</div>
+										<div class="lsj lsj2"></div>
+								</div>
+								<div class=" width22 mg-l-b2">
+										<div id="selectCounty" 	class="fn-c" >请选择</div>
+										<div class="t-ddd" style="display:none" id="hideCounty1">请选择</div>
+										<div class="lsj lsj2"></div>
+								</div>
+	<select class="uhide" id="province" title="正确的地址" name="province"  validator="notEmpty;"></select>
+						
+	<select class="uhide" id="city" title="正确的地址" name="city" validator="notEmpty;"></select>
+							
+	<select class="uhide" id="county"	title="正确的地址" name="county" validator="notEmpty"></select>
+	</div>
+	
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-ac ub-pj ub-b-border">
+		<div class=" fn-s-14 line-h-20">预期筹款期限：</div>
+		<div class="person-inp ub-f1"><input class="width100" id="yqck" title="预期筹款期限" /></div>
+		<div class="img-select" style="margin-left: -1rem;"></div>
+		<select class="uhide" id="yqckS" name="fundTerm"  ></select>
+		
+	</div>
+	
+	<div class="ub bc-withe pd-all-5 mg-t-10 ub-b-border">
+		<div class="ub ub-f1">
+			<textarea class="hei-80  ub w100  radius fn-s-14" validator="notEmpty;{length[20,500]}" definemsg="借款描述必须输入20-500个字" title="借款描述" placeholder="请输入借款描述(20-500个字)"  maxlength="500" id="loanDescription" style="border: none;"></textarea>
+		</div>
+	</div>
+	<div class="ub umar-a2 ub-ac" id="agreementFlag">
+            <input type="checkbox"  class="uhide"  title="请阅读个人信息采集授权条款" validator="checked;" id="autid">
+            <div  class="ub t-bla ub-f1" style="width:7.5rem">
+                <div action="action:turnRememberRido" class="che-icon ub-img umhw2"></div>
+                <div class="ub-f1 ut-s tx-l t-gra ub ub-ac fn-s-12" style=" margin-left:.3rem;"  >我已阅读并同意《<div class="lc_red" action="action:agreement['GRXX']">个人信息采集授权条款</div>》</div>
+            </div>
+    </div>
+	<div class="mg-t-20  bc-withe" action="action:submit">
+		<div class=" ub-f1 line-h-40 radius  b-c-blue fn-s-17 tx-al-c fn-c-white ">提交</div>
+	</div>
+</div>

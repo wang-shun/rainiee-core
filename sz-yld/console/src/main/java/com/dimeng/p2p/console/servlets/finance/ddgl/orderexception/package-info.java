@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_FINANCE_DDYCRZ", name = "订单异常日志", parentId = "P2P_C_FINANCE_DDGL", order = 1)
+package com.dimeng.p2p.console.servlets.finance.ddgl.orderexception;

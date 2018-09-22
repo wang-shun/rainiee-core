@@ -1,0 +1,42 @@
+<div id="registerContent" class="c-e" style="height:100%">
+    <div class="ub ub-ver ub-f1">
+        <div class="b-wh  mg-t-20" > 
+            <div class="ub ub-ac uinput bc-withe  b-bottom ">
+                <div class="uinn-al1 ulev-app25">
+                    <div class=" t-btn-a3 ub-img8 "> </div>
+                </div>
+                <div class="ub-f1  login t-gray">
+                    <input placeholder="请输入用户名" value='' id="accountName" name="accountName" nextfocus="onePwd" maxlength="20" title="用户名" validator="notEmpty;reg[<%=newUserNameRegex%>]"  ></input>
+                </div>
+            </div>
+            <div class="pd-lr-5 line-h-15 fn-s-11 fn-c-blue" id="accountNameReg"><%=userNameRegexContent%></div>
+        </div>
+
+        <div class="b-wh " > 
+            <div class="ub ub-ac  uinput bc-withe b-bottom ">
+                <div class="uinn-al1   ulev-app25">
+                    <div class=" b_image14  ub-img8 "> </div>
+                </div>
+                <div class="ub-f1 login t-gray">
+                    <input placeholder="请输入密码" type="password" name="password" id="password" title="密码" maxlength="20" validator="notEmpty;reg[<%=newPasswordRegex%>]" ></input>
+                </div>
+                 <div class=" b-image-hide" action="action:lookPwd"> </div>
+            </div>
+             <div class="pd-lr-5 line-h-15 fn-s-11 fn-c-blue" id="passwordReg"><%=passwordRegexContent%></div>
+        </div>
+        <div class="b-wh " > 
+            <div class="ub ub-ac uinput  bc-withe  b-bottom">
+                <div class="uinn-al1   ulev-app25">
+                    <div class=" b_image6 ub-img8 "> </div>
+                </div>
+	                <div class="ub-f1 login t-gray">
+	                    <input placeholder="邀请码/推广人手机号/业务员工号" name="code" title="邀请码" maxlength="11" value=""></input>
+	                </div>
+            </div>
+        </div> 
+
+        <div class="ub ub-ac ub-pc umar-a21 c-orange uc-a02" action="action:submit">
+            <div class="ub ub-ac ub-pc t-wh uinnh5 ulev-app4">提&nbsp;&nbsp;交</div>
+        </div> 
+    </div>
+</div>

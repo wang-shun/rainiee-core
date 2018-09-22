@@ -1,0 +1,93 @@
+<div style="position: absolute;left: 0;top: 0; width: 100%;" id='Jupdown'>
+	
+	<div class="yy-item ub ub-ver">
+		<div class="titlePic"></div>
+		<div class="ub ub-f1 ub-ver uinn-ab1">
+			<div class="ub ub-f1 ub-ac ub-pe dataItem">
+				<div class="ub width50">
+					<span class="yy_circle yy_yellow"></span>
+					<span>累计投资金额</span>
+				</div>
+				<div class="width50 ub ub-pe"><%=totalInvestAmount%>元 </div>
+		   </div>
+		   <div class="ub ub-f1 ub-ac ub-pe dataItem">
+				<div class="ub width50">
+					<span class="yy_circle yy_blue"></span>
+					<span>注册用户数</span>
+				</div>
+				<div class="width50 ub ub-pe"><%=totalRegister%>人</div>
+		   </div>
+		   <div class="ub ub-f1 ub-ac ub-pe dataItem">
+				<div class="ub width50">
+					<span class="yy_circle yy_green"></span>
+					<span>累计赚取收益</span>
+				</div>
+				<div class="width50 ub ub-pe"><%=totalEarnAmount%>元</div>
+		   </div>
+		   <div class="ub ub-f1 ub-ac ub-pe dataItem">
+				<div class="ub width50">
+					<span class="yy_circle yy_red"></span>
+					<span>累计成交笔数</span>
+				</div>
+				<div class="width50 ub ub-pe"><%=tradeCount%>笔 </div>
+		   </div>
+	    </div>
+	</div>
+	<div class="yy-item">
+		<div id="container"></div>
+	</div>
+	<div class="yy-item">
+		<div id="containerOne"></div>
+	</div>
+	<div class="yy-item">
+		<div id="containerTwo"></div>
+	</div>
+	<div class="yy-item">
+		<div id="containerThree"></div>
+	</div>
+	<div class="yy-item">
+		<div id="containerFour"></div>
+	</div>
+	<div class="yy-item ub ub-ver">
+		<div class="windPic"></div>
+		<div class="ub ub-f1 ub-ver uinn-ab1">
+			<div class="ub ub-f1 windList">
+				<div class="ub width50 ub-ac ub-pc ub-ver windControl">
+					<span class="ub fn-s-15"><%=totalCompensatoryAmount%>元</span>
+					<span class="ub">累计代偿金额</span>
+				</div>
+				<div class="ub width50 ub-ac ub-pc ub-ver">
+					<span class="ub fn-s-15"><%=parseFloat(maxUserLoanBalanceProportion).toFixed(2)%>%</span>
+					<span class="ub">最大单户借款余额占比</span>
+				</div>
+			</div>
+			<div class="ub ub-f1 windList">
+				<div class="ub width50 ub-ac ub-pc ub-ver windControl">
+					<span class="ub fn-s-15"><%=parseFloat(maxTenUsersLoanBalancePropertion).toFixed(2)%>%</span>
+					<span class="ub">最大10户借款余额占比</span>
+				</div>
+				<div class="ub width50 ub-ac ub-pc ub-ver">
+					<span class="ub fn-s-15"><%=loanOverdueBalanceAmount%>元</span>
+					<span class="ub">借款逾期金额</span>
+				</div>
+			</div>
+			<div class="ub ub-f1 windList">
+				<div class="ub width50 ub-ac ub-pc ub-ver windControl">
+					<span class="ub fn-s-15"><%=parseFloat(loanOverdueBalanceRate).toFixed(2)%>%</span>
+					<span class="ub">借款逾期率</span>
+				</div>
+				<div class="ub width50 ub-ac ub-pc ub-ver">
+					<span class="ub fn-s-15"><%=parseFloat(loanBadDebtRate).toFixed(2)%>%</span>
+					<span class="ub">借款坏账率</span>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="yyFooter">
+	<div class="footImg showImg"></div>
+	<div class="lastImg"></div>
+	<span class="txt" id='txt'>1</span><span>/</span><span class="total"></span>
+</div>

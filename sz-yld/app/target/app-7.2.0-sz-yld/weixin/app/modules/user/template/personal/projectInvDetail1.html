@@ -1,0 +1,176 @@
+<div id='' class="bg-c-gray">
+	<div id="bidtxx">
+	<div class=" c-wh  uinn-a12 b-bottom umar-ab1 lus-b luinn-ab0 pos-relative" bidid="<%=list.id%>">
+
+        <div class="bid-jl-xs">
+			<%if(list.isJlb=="true"){%>
+				<i class="jl-icon"></i>
+			<%}%>
+			<%if(list.isXsb=="true"){%>
+				<i class="xs-icon"></i>
+			<%}%>
+		</div>
+		
+		<div class="width100 tx-al-c pos-relative">
+			<i class="l-bg l-bg-pos"></i>
+			<i class="r-bg r-bg-pos"></i>
+			<div class=" ub ub-pc umar-at line-h-20 pos-relatives">
+				<div class=" ub-ac ellipse-2">
+                    <%=list.flag%>	
+                </div>
+				<div class=" ulev-18 c-gray  t-3  wordbreak-j">&nbsp;<%=list.bidTitle%></div>
+				<div class="bid-type fn-s-12 fn-c-blue">
+					<% if(list.status=="HKZ"){%>
+	            		<span>还款中</span>
+	                 <%}else if(list.status=="YJQ"){%>
+	                 	<span>已结清</span>
+	                 <%}else if(list.status=="YDF"){%>
+	                 	<span>已垫付</span>
+	            	<%}else if(list.status=="DFK"){%>
+	                 	<span>待放款</span>
+	                 <%}%>
+				</div>
+			</div>
+
+			<div class="  umar-ar6 uinn-a7 umar-top">
+				<div class=" ub ub-ver">
+					<div class=" ulev-app15 ub ">
+						<span class="ub ub-f1 ub-ac ub-pc  tx-c f-red ">
+                            <ul>
+                            	<li class="t-a ulev-app14 pd-bt-10">年化利率</li>
+                            	<li class="ulev-app2 t-3 pos-relative">
+                            		<span class="fn-c-blue-1 fn-s-40 "><%=(list.rate*100).toFixed(2)%>%</span>
+                            		<%if(!!list.jlRate){%>
+									   <span class="lc_red jl-rate">+<%=list.jlRate%></span>
+								    <%}%>
+                            	</li>
+							</ul>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="  umar-ar6 uinn-a7 umar-top lumar-ab12">
+			<div class=" ub ub-ver">
+				<div class=" ulev-app15 ub ">
+					<span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+                        <ul class="w100">
+                        	<li class="t-a ulev-app2">项目金额</li>
+                            <li class="ulev-app4"><%=fmoney((list.amount*1).toFixed(2)*1)%><span class="ulev-app2 t-3">元</span></li>
+						</ul>
+					</span>
+					<span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+                        <ul class="w100">
+                        	<li class="t-a ulev-app2">投资期限</li>
+                    		<li class="ulev-app2 t-3"><span class="ulev-app4"><%=list.cycle%></span><span class="ulev-app2"><%=list.qxUnit%></span></li>
+						</ul>
+					</span>
+              <%if(!list.status=="YJQ" || !list.status=="YDF"){%>
+					<span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+                        <ul class="w100">
+                        	<%if(list.status=="TBZ"||list.status=="YFB"){%>
+                        		<li class="t-a ulev-app2">可投金额 </li>
+                                <li class="fn-c-org ulev-18"><%=fmoney((list.remainAmount*1).toFixed(2)*1)%><span class="ulev-app2 t-3">元</span></li>
+                            <%}else if(list.status=="DFK"){%>
+                            	<li class="t-a ulev-app2">加入人次 </li>
+                                <li class="fn-c-org ulev-18"><%=list.peopleNum%></li>
+                            <%}else if(list.status=="HKZ"){%>
+                            	<li class="t-a ulev-app2">剩余期数（期） </li>
+                                <li class="fn-c-org ulev-18"><%=list.days%></li>
+                            <%}%>
+						</ul>
+					</span>
+					<%}%>
+				</div>
+			</div>
+		</div>
+		
+		<div class=" mar-a-0-1 process_T">
+			<div class="process_T_z" style="width:<%=list.progress%>%"></div>
+		</div>
+		<div class="ub pd-lr-5 mg-b-15 fn-s-12 fn-c-blue-1">
+			<div class="ub-f1 ub-ac">
+				<span>剩余可投：</span><span><%=fmoney((list.remainAmount*1).toFixed(2)*1)%></span><span>元</span>
+			</div>
+			<div>
+				<span>进度：</span><span><%=list.progress%>%</span>
+			</div>
+		</div>
+		
+		
+		
+						
+	</div>
+	<div class=" c-wh   b-top-bottom umar-ab1 lus-b ulev-app14 line-h-40">
+		
+		<div class=" ub bd-t uinn-a4">
+        	<% if(list.status=="YFB"){%>
+             	<div>开放投资倒计时：&nbsp;&nbsp;</div>
+        		<div class="fn-c-gray ub ub-pe ub-f1" id='remainTime'></div>
+             <%}else if(list.status=="TBZ"){%>
+             	<div>剩余时间：&nbsp;&nbsp;</div>
+        		<div class="fn-c-gray ub ub-pe ub-f1" id='remainTime'></div>
+             <%}else if(list.status=="DFK"){%>
+             	<div>筹款用时：&nbsp;&nbsp;</div>
+        		<div class="fn-c-gray ub ub-pe ub-f1" ><%=list.fundDate%></div>
+             <%}else if(list.status=="YJQ"){%>
+             	<div>还清时间：&nbsp;&nbsp;</div>
+        		<div class="fn-c-gray ub ub-pe ub-f1" ><%=list.fundDate%></div>
+        	<%}else if(list.status=="HKZ"){%>
+             	<div>待还本息（元）：&nbsp;&nbsp;</div>
+        		<div class="fn-c-gray ub ub-pe ub-f1" >¥<%=list.dhjeAmount%></div>
+             <%}else if(list.status=="YDF"){%>
+             	<div>垫付时间 ：&nbsp;&nbsp;</div>
+        		<div class="fn-c-gray ub ub-pe ub-f1"><%=list.fundDate%></div>
+             <%}%>
+		</div>
+		
+		
+		<div class="ub bd-t uinn-a4">
+			<div>还款方式：&nbsp;&nbsp;</div>
+    		<div class="fn-c-gray ub ub-pe ub-f1">
+    			<%if(!!list.paymentType){%>
+					<%=list.paymentType%>
+			    <%}%>
+    		</div>
+		</div>
+		
+		
+		<%if(!!list.guarantee){%>
+			<div class='ub bd-t uinn-a4'>
+				<div>担保机构：&nbsp;&nbsp;</div>
+				<div class="t-3 ub ub-pe ub-f1"><%=list.guarantee%></div>
+			</div>
+		<%}%>
+		<%if((list.guarantee!=="")&&(!!list.guaSch)){%>
+			<div class='ub bd-t uinn-a4'>
+				<div>保障方式：&nbsp;&nbsp;</div>
+				<div class="t-3 ub ub-pe ub-f1"><%=list.guaSch%></div>
+			</div>
+		<%}%>
+		
+	
+
+		<%if(isShowFXTS==true){%>
+			<div class='ub bd-t uinn-a4' id="agreementFlag">
+					<div>风险提示：&nbsp;&nbsp;</div>
+					<div class="fn-c-org fn-c-org ub ub-pe ub-f1" action="action:agreement['FXTSH']">详见《风险提示函》</div>
+					<div class="uifo-base1-1 uf-jt"></div>
+			</div>
+		<%}%>
+		
+		<%if(list.isinvestLimit==true&&list.isOpenRisk==true){%>
+
+			<div class='ub uinn-a4'>
+					<div>风险承受等级：&nbsp;&nbsp;</div>
+					<div class="t-3 ub ub-pe ub-f1"><%=list.riskLevel%></div>
+			</div>
+		<%}%>
+	</div>
+	</div>
+	<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  tx-c line-h-25 luinn-a63 bg-b-gray uhide" id='login_more'>
+		<span id='Jlogin' class="fn-c-blue text-underline">登录</span>查看更多详情
+	</div>
+	<div id='bidxx'> </div>
+
+</div>

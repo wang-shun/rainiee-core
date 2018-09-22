@@ -1,0 +1,49 @@
+<div id="myPromotionAward">
+	<div class="yy-item ub-ver">
+		<div class="ub ub-f1 ub-ver uinn-ab1 hei-140">
+			<div class="ub ub-f1 windList hei-35">
+				<div class="ub width50 ub-ac ub-pc ub-ver windControl">
+					<span class="ub fn-s-15">推广客户总数:</span>
+					<span class="ub"><i class="rewardText ulev-18"><%=spreadTotle.yqCount%></i></span>
+				</div>
+				<div class="ub width50 ub-ac ub-pc ub-ver">
+					<span class="ub fn-s-15">持续奖励总计:</span>
+					<span class="ub"><i class="rewardText ulev-18"><%=(spreadTotle.rewardCxtg*1).toFixed(2)%></i></span>
+				</div>
+			</div>
+			<div class="ub ub-f1 windList">
+				<div class="ub width50 ub-ac ub-pc ub-ver windControl">
+					<span class="ub fn-s-15">有效推广奖励:</span>
+					<span class="ub"><i class="rewardText ulev-18"><%=(spreadTotle.rewardYxtg*1).toFixed(2)%></i></span>
+				</div>
+				<div class="ub width50 ub-ac ub-pc ub-ver">
+					<span class="ub fn-s-15">推广奖励总计:</span>
+					<span class="ub"><i class="rewardText ulev-18"><%=(spreadTotle.rewardTotle*1).toFixed(2)%></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="fn-c lulev-app145 pd-l-10 hei-30">邀请好友注册详情</p>
+		<%if(spreadEntitys.length>0){%>
+		<div class="myPromotion-bd">
+			<div class="ub ltable bg-b-gray ulev-app13" >
+					<div class="ub width44 ub-ac ub-pc ">您推荐好友用户名</div>
+					<div class="ub width51 ub-pe ub-ae mg-r-20">推荐时间</div>
+			</div>
+			<%for(var i=0;i<spreadEntitys.length;i++){%>
+			<div class="ub ltable c-wh b-top-bottom ulev-app2">
+						<div class="ub width44 ub-ac ub-pc"><%=(spreadEntitys[i].userName).substring(0,2)+'***'+(spreadEntitys[i].userName).substring(spreadEntitys[i].userName.length-2)%></div>
+						<div class="ub width51 ub-pe ub-ae "><%=spreadEntitys[i].registerTime%></div>
+			</div>
+			<%}%>	
+		</div>
+		 
+	  <%}else{%>
+	  	 <p class="tx-al-c fn-s-13">您暂无好友邀请记录</p>
+		 <div class="ub ub-ac ub-pc umar-a21 c-orange uc-a02 " action="index/index/myPromotionAward/1">
+            <div class="ub ub-ac ub-pc t-wh line-h-45 ulev-app4">马上去邀请</div>
+        </div>
+	  <%}%>
+	
+</div>
+ 

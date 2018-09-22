@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Review id="20160225富友托管代码review">
+  <ReviewIssue id="IL9B1LAU">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:02:08:406 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:33:30:371 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="134">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/BidQuery.java</File>
+    <Type>item.type.label.codingStandards</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>添加注释</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9B7DRK">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:06:38:576 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:33:22:283 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="247">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/ChargeWithdrawQuery.java</File>
+    <Type>item.type.label.usability</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>说明160000000这个值的意义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9BANH4">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:09:11:128 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:32:21:819 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="267">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/ChargeWithdrawQuery.java</File>
+    <Type>item.type.label.codingStandards</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>添加方法描述</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.closed</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9BQ67U">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:21:15:258 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:31:57:437 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="378">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/AutoManageImpl.java</File>
+    <Type>item.type.label.usability</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>方法参数应该封装一下</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9C2QWH">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:31:01:937 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:28:37:644 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="104">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYActivityExecutor.java</File>
+    <Type>item.type.label.codingStandards</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>参数需要封装</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9C3RU6">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:31:49:806 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:25:00:369 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="60">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYActivityExecutor.java</File>
+    <Type>item.type.label.clarity</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>注释不明确</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9C5HQF">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:33:10:023 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:24:47:535 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="130">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYActivityExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>级别不是应该再高一点</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9C74CW">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:34:26:000 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:24:14:757 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="175">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYActivityExecutor.java</File>
+    <Type>item.type.label.codingStandards</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>定义常量</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9C8I2A">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:35:30:418 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:22:55:807 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="173">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYActivityExecutor.java</File>
+    <Type>item.type.label.clarity</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>封装参数</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.closed</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL9CI96T">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 19:43:05:477 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:22:43:189 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>林辉</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="104">src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ChargeInform.java</File>
+    <Type>item.type.label.codingStandards</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>多余，可删除</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+</Review>

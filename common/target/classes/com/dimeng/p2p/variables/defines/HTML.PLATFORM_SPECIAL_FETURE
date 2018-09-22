@@ -1,0 +1,23 @@
+<div class="w1002">
+  <div class="tzlc_bg">
+    <ul class="tzlc">
+      <li>
+        <div class="tzlc_img1"></div>
+        <div class="tc f16 mt20"><span class="orange">一元</span>起投，起点超低</div>
+      </li>
+      <li>
+        <div class="tzlc_img2"></div>
+        <div class="tc f16 mt20">定期存款<span class="orange">5倍</span>的收益</div>
+      </li>
+      <li>
+        <div class="tzlc_img3"></div>
+        <div class="tc f16"><span class="orange">只需30秒，</span><br/>注册-认证-充值-投资即可</div>
+      </li>
+      <li style="padding-right:0; border:0">
+        <div class="tzlc_img4"><a href="<%=controller.getViewURI(request, Aqbz.class) %>" style="display:block;width:143px;height:140px;">&nbsp;</a></div>
+        <div class="tc f16">资金托管，<span class="orange">两层风控，</span><br/>足额抵押，担保兜底</div>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</div>        

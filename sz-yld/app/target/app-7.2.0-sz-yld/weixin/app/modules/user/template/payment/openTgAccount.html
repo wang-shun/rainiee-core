@@ -1,0 +1,41 @@
+<div class="fn-s-15 openTgAccount">
+	<div class="pd-all-10 ub bd-t">
+		<div class="ub-f1">
+			<span>真实姓名</span>
+		</div>
+		<div class="ub-f1 ub ub-pe">
+			<input type="text" class="tx-r fn-s-14" name="realName" placeholder="请输入真实姓名" value="<%=DMJS.userInfo.name?DMJS.userInfo.name:''%>" title="真实姓名" validator="notEmpty;"/>
+		</div>
+	</div>
+	<div class="pd-all-10 ub bd-t">
+		<div class="ub-f1">
+			<span>身份证号</span>
+		</div>
+		<div class="ub-f1 ub ub-pe">
+			<input type="text" class="tx-r fn-s-14" name="idCard" value="<%=DMJS.userInfo.realIdCard?DMJS.userInfo.realIdCard:''%>" placeholder="请输入身份证号" title="身份证号" validator="notEmpty;"/>
+		</div>
+	</div>
+	<div class="pd-all-10 ub bd-t">
+		<div class="ub-f1">
+			<span>手机号码</span>
+		</div>
+		<div class="ub-f1 ub ub-pe">
+			<input type="text" class="tx-r fn-s-14" id="phone" name="phone" value="<%=DMJS.userInfo.phoneNumber?DMJS.userInfo.phoneNumber:phoneNum%>" maxlength="11" placeholder="请输入手机号码" title="手机号码" validator="notEmpty;"/>
+		</div>
+	</div>
+	<div class="pd-all-10 ub bd-t">
+		<div class="ub-f1 ub ub-ac">
+			<span>手机验证码</span>
+		</div>
+		<div class="ub-f1 ub ub-pe ub-ac pd-r-10 width30">
+			<input type="text" name="verifyCode" class="fn-s-14" placeholder="请输入手机验证码" title="手机验证码" maxlength="4" validator="notEmpty;"/>
+		</div>
+		<div class="ub-f1 ub ub-ac ub-pe">
+        	<div class="c-orange fn-s-13 ub-border t-wh pd-all-8" id="yzm" action="action:getMobileCode">获取验证码</div>
+			<div class="fn-s-13 ub-border fn-c-white pd-all-8 hide" id="yzm_info"  style="color: #D3D3D3;"><span id="yzm_count">60</span>秒重新发送</div>
+        </div>
+	</div>
+	 <div class="ub ub-ac ub-pc umar-a21 c-orange uc-a02" action="action:toOpenTg">
+            <div class="ub ub-ac ub-pc t-wh  line-h-45 ulev-app4"><span>立即开通</span></div>
+       </div>
+</div>

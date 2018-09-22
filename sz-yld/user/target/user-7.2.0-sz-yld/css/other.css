@@ -1,0 +1,37 @@
+* { margin: 0; padding: 0; }
+body { padding: 0px; margin: 0px; font-size:14px; color: #666; width: 100%; height: 100%; font-family: "Microsoft Yahei"; }
+.lh150 { line-height: 150%; }
+.lh200 { line-height: 200%; }
+.agreement-container { padding:0 20px; }
+.fb { font-weight: bold; }
+.pt20 { padding-top:20px; }
+.pt40 { padding-top:40px; }
+.blue { color: #39F; }
+.h3-title { font-size:18px; text-align: center; line-height:40px; border-bottom:1px solid #dddddd;}
+.table { border-collapse: collapse; border:1px solid #ddd; width: 100%; }
+table tr, th, td{ border:1px solid #ddd; text-align: center; word-break: break-all; word-wrap: break-word; vertical-align: top }
+.ul-list { padding-left:20px; list-style:none;}
+.download{ padding:3px 10px;background:#368cc9;color:#fff;float:right; text-decoration:none; margin:10px 10px 0 0;}
+.btn {
+clear: both;
+margin: 15px 0;
+background: #368cc9;
+border-radius: 6px;
+text-align: center;
+width: 88px;
+height: 29px;
+line-height: 29px;
+color: #fff;
+font-family: "Microsoft Yahei";
+display: inline-block;
+float: right;
+}
+.clearfix:after {
+content: "\200B";
+display: block;
+height: 0;
+clear: both;
+}
+.clearfix {
+*zoom: 1;
+}

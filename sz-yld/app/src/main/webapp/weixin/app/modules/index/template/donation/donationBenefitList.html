@@ -1,0 +1,35 @@
+<%for(var i=0;i<data.length;i++){%>
+<div class="bc-withe mg-t-5 pd-all-5 " data-id='<%=data[i].bidId%>' data-status="<%=data[i].status%>" data-isTimeEnd="<%=data[i].isTimeEnd%>">
+									<div class="ub pd-bt-5 fn-s-14 fn-c">
+										<div class="img-gyb"></div>
+										<div class="ub-f1 dis-over">&nbsp;<%=DMJS.CommonTools.renderStringLen(data[i].loanName,13)%></div>
+									</div>
+									<div class="ub ">
+										<div class="width80 fn-s-13">
+											<div class="pd-bt-5">募捐金额:&nbsp;&nbsp;<span class="fn-c-org"><%=data[i].loanAmount%>元</span></div>
+											<div class="pd-bt-5">公益机构:&nbsp;&nbsp;<span class="fn-c"><%=data[i].organisers%></span></div>
+										</div>
+										<div class="uinn-a1 ub ub-ver ">
+					<div class="box">
+						<div class="bg1"></div>
+					 <%if(data[i].progress*100 <=50 ){%>
+						<div id="rount" class="rount" style="-webkit-transform:rotate(<%=3.6*data[i].progress*100%>deg)"></div>
+						<div class="bg2"></div>
+						
+						<div id="rount2" class="rount2" style="-webkit-transform:rotate(180deg)"></div>
+					<%}else{%>
+						<div id="rount" class="rount" style="-webkit-transform:rotate(180deg)"></div>
+						<div class="bg2"></div>
+	
+						<div id="rount2" class="rount2" style="display:block;-webkit-transform:rotate(<%=3.6*(data[i].progress*100-50)%>deg)"></div>
+					<%}%>
+					<%if((data[i].progress*100).toFixed(0)<100&&data[i].isTimeEnd!=true){%>
+						<div id="num" class="num">捐助</div>
+					<%}else{%>
+						<div id="num" class="num"><%=(data[i].progress*100).toFixed(0)%>%</div>
+					<%}%>
+					</div>
+				</div>
+									</div>
+</div>
+<%}%>

@@ -1,0 +1,42 @@
+ <div id="loginContent" class="hei-inherit">
+    <div class="ub ub-ver ub-f1 hei-inherit c-e">
+        <div class="b-wh mg-t-20 uc-a02  bc-withe"> 
+            <div class="ub ub-ac uinput b-bottom b-wh">
+                <div class="uinn-al8 fn-s-25">
+                    <div class="  t-btn-a3 ub-img8 "> </div>
+                </div>
+                <div class="ub-f1 login t-wh1">
+                    <input placeholder="请输入用户名/手机号/邮箱" id="userName" name="accountName" nextfocus="password" title="用户名/手机号/邮箱" validator="notEmpty;reg[/^[\w]{1,}$|(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/]" value="<%=info?info:''%>" ></input>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="b-wh  uc-a02  bc-withe"  > 
+            <div class="ub ub-ac uinput b-bottom   b-wh">
+                <div class="uinn-al8 fn-s-25">
+                    <div class=" b_image21 ub-img8 "> </div>
+                </div>
+                <div class="ub-f1 login t-wh1">
+                    <input placeholder="请输入密码" name="password"  title="密码" id="password" validator="notEmpty;" type="password" maxlength="16" value="" ></input>
+                </div>
+                <div class=" b-image-hide" action="action:lookPwd"> </div>
+            </div>
+        </div>
+
+
+        <div class="ub ub-ac ub-pc umar-a21 c-orange uc-a02 " action="action:login">
+            <div class="ub ub-ac ub-pc t-wh line-h-45 ulev-app4">登录</div>
+        </div>
+        <div class="ub umar-a222 t-oran ulev-app13">
+        	 <div class="ub ub-f1 ub-ps fn-s-15 t-oran uinn-al10 ub-pe mar-ar1 ulev-app14" action="user/personal/register">免费注册</div> |
+            <div class="ub ub-f1  fn-s-15 t-oran uinn-ar2 mar-aL1 ulev-app14" action="user/password/loginPwdCode">忘记密码</div> 
+        </div>
+
+        <input type="hidden"  id='hidopenId'></input>
+        <input type="hidden"  id='hidaccessToken'></input>
+
+    </div>
+</div>
+
+

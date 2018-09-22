@@ -1,0 +1,34 @@
+package com.dimeng.p2p.console.servlets.info.bzzx.czytx;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dimeng.framework.http.servlet.annotation.Right;
+import com.dimeng.framework.service.ServiceSession;
+import com.dimeng.p2p.console.servlets.info.AbstractInformationServlet;
+import com.dimeng.p2p.modules.base.console.service.ArticleManage;
+import com.dimeng.util.parser.IntegerParser;
+
+@Right(id = "P2P_C_INFO_BZZX_MENU", name = "帮助中心",moduleId="P2P_C_INFO_BZZX",order=0)
+public class DeleteCzytxWtlx extends AbstractInformationServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void processPost(HttpServletRequest request,
+			HttpServletResponse response, ServiceSession serviceSession)
+			throws Throwable {
+		processGet(request, response, serviceSession);
+	}
+
+	@Override
+	protected void processGet(HttpServletRequest request,
+			HttpServletResponse response, ServiceSession serviceSession)
+			throws Throwable {
+		ArticleManage manage = serviceSession.getService(ArticleManage.class);
+		manage.deleteQuestionType(IntegerParser.parseArray(request.getParameterValues("id")));
+		sendRedirect(request, response,
+				getController().getURI(request, SearchCzytxWtlx.class));
+	}
+
+}

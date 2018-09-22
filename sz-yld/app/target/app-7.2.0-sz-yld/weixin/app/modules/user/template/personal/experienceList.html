@@ -1,0 +1,25 @@
+	<%for(var i=0;i<data.length;i++){%>
+	<div class="ub pd-r-20 <%=data[i].status=='YGQ' ? '' :'exp-more' %> mg-t-10 bc-withe" >
+		<div class="exp-l line-h-20 fn-s-15">￥<%=data[i].expAmount%></div>
+		
+		
+		<%if(data[i].status=='WSY'){%>
+		<div class="exp-c ub ub-ac">截止日期：<%=data[i].endDate%></div>
+		<%=data[i].endDate.indexOf('已过期')==-1 ? "<div class='exp-r ub ub-ac ub-pe' data-id='data[i].experienceId' action='index/index/projectInvestment'>去投资</div>" : ''%>
+		<span class="exp-r-org"><%=data[i].statusDes%></span>
+		<%}if(data[i].status=='YTZ'){%>
+		<div class="exp-r  ub ub-ac ub-f1 tx-al-r ub-pe" data-id="<%=data[i].experienceId%>" data-status="YTZ">投资详情</div>
+		<span class="exp-r-gray"><%=data[i].statusDes%></span>
+		<%}if(data[i].status=='YWT'){%>
+		<div class="exp-r  ub ub-ac ub-f1 tx-al-r ub-pe" data-id="<%=data[i].experienceId%>" data-status="YWT">投资详情</div>
+		<span class="exp-r-gray"><%=data[i].statusDes%></span>
+		<%}if(data[i].status=='YGQ'){%>
+		<div class="exp-c ub ub-ac">过期日期:<%=data[i].endDate%></div>
+		<span class="exp-r-gray"><%=data[i].statusDes%></span>
+		<%}if(data[i].status=='YJQ'){%>
+		<div class="exp-r  ub ub-ac ub-f1 tx-al-r ub-pe" data-id="<%=data[i].experienceId%>" data-status="YJQ">投资详情</div>
+		<span class="exp-r-gray"><%=data[i].statusDes%></span>
+		<%}%>
+		
+	</div>
+	<%}%>

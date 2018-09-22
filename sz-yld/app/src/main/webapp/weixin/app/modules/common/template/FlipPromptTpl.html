@@ -1,0 +1,159 @@
+<%if(obj["type"] == "alert"){%>    <!-- 弹出提示框 -->
+   <div id="FPrompt" class="ub-b-border" >
+      <!-- 开始 -->
+      <!-- 设置标题区 -->
+      <%if(obj["displaySure"]=='no'){%>
+	          <div class="pop1_title Ftitle ulev-app4  b-bottom ">
+	        <%}else{%>
+	           <div class="pop1_title Ftitle ulev-app4  b-bottom ">
+	        <%}%>
+      
+        <%=obj["title"]%>
+      </div>  
+      <!--设置内容区-->
+   	  <div class=" " style="background:#fff;">
+      	<div class="pop1_word Fcontent b-bottom ">
+      	   <%if(obj["displaySure"]!='no'){%>
+	           <p class="ulev-app15 t-6">
+	        <%}else{%>
+	           <p class="ulev-app14 t-oran">
+	        <%}%>
+	        	<!--内容信息-->
+	        	<%if(obj["content"].indexOf("<i>")!=-1&&obj["content"].indexOf("</i>")!=-1){%>
+	        		<%=obj["content"]%>
+	        	<%}else{%>
+		        	<span >
+		        		<%=obj["content"]%>
+		        	</span>
+	        	<%}%>
+	        	<!--内容信息-->
+	        </p>
+        </div>
+        <%if(obj["displaySure"]!='no'){%>
+        <div class="pop1_btn">
+                <!--按钮区-->
+	        	<input type="button" action="FBntAlert" class="pop_btn_orange w100 dsb auto FBntAlert" value="确定"></input>
+	        	<!--按钮区-->
+	     </div>
+        <%}%>
+        
+        
+        
+      </div>
+   	  <!--设置内容区-->
+   
+   </div>
+   <%}else if(obj["type"] == "confirm"){%>   <!-- 弹出确认框 -->
+   <div id="FPrompt"   >
+      <!-- 开始 -->
+      <!-- 设置标题区 -->
+      <p class="pop1_title Ftitle ulev-app4 b-bottom">  <%=obj["title"]%>  </p>
+ 
+      <div class="pop1_content " style="background:#fff;">
+      	<div class="pop1_word b-bottom">
+      		 <!-- 设置内容区 -->
+      		 <%if(obj["content"].indexOf("</div>")!=-1){%>
+      		 	<div class="Fcontent" >
+      		 		<%=obj["content"]%>
+      		 	</div>
+      		 <%}else{%>
+	        <p class="Fcontent">
+	        	<%if(obj["content"].indexOf("<i>")!=-1&&obj["content"].indexOf("</i>")!=-1){%>
+	        		<%=obj["content"]%>
+	        	<%}else{%>
+		        	<span class="ulev-app15">
+		        		<%=obj["content"]%>
+		        	</span>
+	        	<%}%>
+	        </p>
+	        <%}%>
+	         <!-- 设置内容区 -->
+        </div>
+        <div class="pop1_btn">
+        	 <!-- 设置按钮区 -->
+        	 <%if(obj["IsBntConverse"]=="true"){%>
+        	 	 <input type="button" action="FBntcancel"
+		           class="w40 mr-1 fr FBntcancel <%=obj["FBntCancelColor"]%>" 
+		           value=<%=obj["FBntcancel"]%>>
+		         </input>
+		         
+		         <input type="button" action="FBntconfirm" 
+		           class="w40 ml-1 fl FBntconfirm <%=obj["FBntConfirmColor"]%>"  
+		           value=<%=obj["FBntconfirm"]%>>
+		         </input>
+          	 <%}else{%>
+          	 	<input type="button" action="FBntcancel"
+		           class="w40 ml-1 fl FBntcancel <%=obj["FBntCancelColor"]%>" 
+		           value=<%=obj["FBntcancel"]%>>
+		         </input>
+		         
+		         <input type="button" action="FBntconfirm" 
+		           class="w40 mr-1 fr FBntconfirm <%=obj["FBntConfirmColor"]%>"  
+		           value=<%=obj["FBntconfirm"]%>>
+		         </input>
+          	 <%}%>
+        </div>
+      </div>
+   
+   </div>
+   <%}else if(obj["type"] == "noneTitle"){%>   <!-- 弹出确认框没有标题 -->
+   <div id="FPrompt"   >
+ 
+      <div class="pop1_content " style="background:#fff;">
+      	<div style="    padding: 1em 0em 0;width: 82%;margin: 0 auto;">
+		        <%=obj["content"]%>
+        </div>
+        <div class="pop1_btn" style="background: #fff;">
+        	 <!-- 设置按钮区 -->
+	    	 <input type="button" action="FBntconfirm" 
+	           class="w40 ml-1 fl FBntconfirm <%=obj["FBntConfirmColor"]%>"  
+	           value=<%=obj["FBntconfirm"]%>>
+	         </input>
+	         <input type="button" action="FBntcancel"
+	           class="w40 mr-1 fr FBntcancel <%=obj["FBntCancelColor"]%>" 
+	           value=<%=obj["FBntcancel"]%>>
+	         </input>
+          	 <!-- 设置按钮区 -->
+        </div>
+      </div>
+   
+   </div>
+   <%}else if(obj["type"] == "Flayer"){%>   <!-- 弹出吐丝框 -->
+      <!-- 设置内容区 -->
+      <div class="blackblub_wrap">
+         <p class="blackblub wordbreak tac"> 
+         	<span>
+           		<%=obj["content"]%>
+            </span>
+         </p>
+      </div>
+   <%}else if(obj["type"] == "Loading"){%>  <!-- 加载 -->
+      <!-- 设置内容区 -->
+      <div class="blackblub_wrap Loading">
+         <p class="blackblub wordbreak tac"> 
+         	<span>
+	          <span class="loading_01"></span>
+	          <%=obj["content"]%>
+         	</span>
+         </p>
+      </div>
+      
+      <!-- <div class="Flayer">
+        <%=obj["content"]%>
+      </div> -->
+   <%} else if(obj["type"] == "Tip"){%>  <!-- 加载 -->
+      <!-- 设置内容区 -->
+      <div class="blackblub_wrap Loading">
+         <p class="blackblub wordbreak tac"> 
+         	<span>
+	          <%=obj["content"]%>
+         	</span>
+         </p>
+      </div>
+      
+      <!-- <div class="Flayer">
+        <%=obj["content"]%>
+      </div> -->
+   <%}%>
+
+

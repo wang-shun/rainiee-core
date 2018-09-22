@@ -1,0 +1,141 @@
+<div id="userInfoContent" class="bg-b-gray">
+<div>
+<div class='bg-c-blue fn-c-white'>
+<div class="fn-s-14 uinn-8">
+	<div class="ub-f1 fn-s-15  pd-bt-15">您好！<%=userName%></div>
+	<div class="line-h-30 ub-f1 tx-al-c">投资总收益（元）</div>
+	<div class="fn-s-40 line-h-50 tx-al-c">
+		<%=earnAmount%>
+	</div>
+	<div class="fn-s-12  line-h-30 tx-al-c">
+		可用余额：<%=DMJS.CommonTools.fmoney(overAmount)%>元
+	</div>
+</div>	
+</div>
+
+<div class="ub pd-bt-15  tx-c fn-c fn-s-15 umar-ab2 c-wh ">
+		<div class="ub-f1 bd-r" action="action:recharge"><span class="img-chong user-size"></span>&nbsp;充值</div>
+		<div class="ub-f1 bd-r" action="action:withdraw"><span class="img-tixian user-size"></span>&nbsp;提现</div>
+		<div class="ub-f1" action="user/personal/myReward"><span class="img-award user-size"></span>&nbsp;我的奖励</div>
+</div>
+
+<ul class="umar-ab2 c-wh">
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">总资产</p></div>
+				<p><%=DMJS.CommonTools.fmoney(merelyAmount)%></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">冻结金额</p></div>
+			    <p><%=DMJS.CommonTools.fmoney(freezeAmount)%></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">借款负债</p></div>
+		        <p><%=DMJS.CommonTools.fmoney(loanAmount)%></p>
+			</div>
+		</li>
+</ul>
+
+<ul class="umar-ab2 c-wh">
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/myInvestment">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">我的投资</p></div>
+				<p><span class="pd-r-5">已投项目<%=tzCount%></span><span class="r_go_icon"></span></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/payment/creditorOver">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">债权转让</p></div>
+			    <p><span class="pd-r-5">转让中债权<%=zqCount%></span><span class="r_go_icon"></span></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/myLoan">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">我的借款</p></div>
+		        <p>
+		        	<span class="pd-r-5">总额:<%=DMJS.CommonTools.fmoney(countMoney)%></span>
+		        	<span class="r_go_icon"></span>
+		        </p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<%if(!!isOpenRisk){%>
+			<div class="ub width100" action="action:riskInvestment">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">风险评估</p></div>
+				<p>
+					<span class="pd-r-5"><%=riskType%>，<%=riskTimes?"可评估"+riskTimes+"次":"可评估0次"%></span>
+					<span class="r_go_icon"></span>
+				</p>
+			</div>
+			<%}%>
+		</li>
+</ul>
+
+<ul id="myMall" class="umar-ab2 c-wh uhide">
+	    <li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/myIntegral">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">我的积分</p></div>
+				<p><%=usableScore%>积分</p>
+			</div>
+		</li>
+	    <li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/myOrder">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">我的订单</p></div>
+				<p><span class="pd-r-5">所有订单<%=orderCount%></span><span class="r_go_icon"></span></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="index/index/shopCart">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">购物车</p></div>
+				<p><span class="pd-r-5">有<%=carCount%>件商品</span><span class="r_go_icon"></span></p>
+			</div>
+		</li>
+	    <li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="index/index/addressManager/isUser">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">收货地址管理</p></div>
+				<p><span class="r_go_icon"></p>
+			</div>
+		</li>
+</ul>
+
+<ul class="umar-ab2 c-wh">
+	    <li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/tranLog">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">交易记录</p></div>
+				<p><span class="r_go_icon"></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="action:cardManage">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">银行卡管理</p></div>
+				<p><span class="r_go_icon"></p>
+			</div>
+		</li>
+</ul>
+<ul class="umar-ab2 c-wh">
+	    <li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/ticklingList">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">意见反馈</p></div>
+				<p><span class="r_go_icon"></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/help">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">新手入门</p></div>
+				<p><span class="r_go_icon"></p>
+			</div>
+		</li>
+		<li class="ub b-bottom fn-s-14 pd-lr-10 line-h-40">
+			<div class="ub width100" action="user/personal/set">
+				<div class="ub-f1"><p class="fn-s-16 fn-c">设置</p></div>
+				<p><span class="r_go_icon"></p>
+			</div>
+		</li>
+</ul>
+
+</div>
+</div>

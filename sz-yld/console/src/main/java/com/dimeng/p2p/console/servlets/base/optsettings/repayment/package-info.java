@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_BASE_OPTSETTINGS_REPAYMENT", name = "账单提醒设置" ,parentId="P2P_C_BASE_OPTSETTINGS" ,order = 7)
+package com.dimeng.p2p.console.servlets.base.optsettings.repayment;

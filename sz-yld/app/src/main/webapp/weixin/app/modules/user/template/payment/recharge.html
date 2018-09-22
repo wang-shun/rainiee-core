@@ -1,0 +1,45 @@
+<div id="recharge" >
+	<%if(!DMJS.userInfo.tg){%>
+	<div class="">
+		<div class="ub  ub-pj ub-ac pd-all-10 bc-withe" id="turnRadio">
+		  <div class="ub width50 hei-40 line-h-40 umar-r">
+		    <input type="radio" class="uhid" name="paymentInstitution"  id="jkxy" value="ALLINWAPPAY" checked="true">
+		    <div class="ub img-allinpay" ></div>
+		  </div>
+		</div>
+	</div>
+	<%}%>
+	   <div class=" umar-a22 uc-a02 " > 
+	    <div class="pd-l-10  fn-s-15 line-h-30 fn-c">请输入充值金额：</div>
+         <div class="ub ub-ac  uinput mar-a-1 ub-border bc-withe">
+                   <div class="ub-f1  uinn ub t-gra ">
+                            <div class="ub  ub-f1">
+                                <input placeholder="请输入金额" name="amount" id="amount"  type="number" title="充值金额"   type="number" validator="val[<%=min%>,<%=max%>]"  maxlength="20" class="uc-a02 tx-l">
+                            </div>
+                     <div class="ub ulev-app15 ub-pe ub-ac umar-r" style="min-width: 1.2em;">元</div>
+                </div>
+           </div>
+       <div class="ub ub-pj ub-ac umar-a15" id="sc_amount">
+         <div class="width20 ub-border bc-withe line-h-35 mar-a fn-s-15 tx-c " data-amount='2000'>2000</div>
+         <div class="width20 ub-border bc-withe line-h-35 mar-a fn-s-15 tx-c" data-amount='500'>500</div>
+         <div class="width20 ub-border bc-withe line-h-35 mar-a fn-s-15 tx-c" data-amount='200'>200</div>
+         <div class="width20 ub-border bc-withe line-h-35 mar-a fn-s-15 tx-c" data-amount='100'>100</div>
+        </div>
+      </div> 
+      
+      
+      <div class="ub umar-a2-extend ub-ac">
+			<div  class="ub t-blu umar-r fn-s-14">充值手续费(元)：<span id="txsxf">0.00</span></div>
+	 </div>
+				
+	<div class="ub umar-a2-extend ub-ac">
+			<div  class="ub t-blu umar-r fn-s-14">实际到账金额(元)：<span class="ub t-red" id="paySum">0.00</span></div>
+	</div>
+    <div class="ub ub-ac ub-pc umar-a21 c-orange uc-a02" action="action:charge">
+           <div class="ub ub-ac ub-pc t-wh uinnh5 ulev-app4">充值</div>
+    </div>
+    <div class="pd-l-10  fn-s-15 line-h-30">温馨提示：</div>
+    <div class="pd-bt-5 fn-s-12 ">
+		<div class="pd-l-20 pd-b-20 pd-r-10"><%=cwxts%></div>
+	</div>
+</div>

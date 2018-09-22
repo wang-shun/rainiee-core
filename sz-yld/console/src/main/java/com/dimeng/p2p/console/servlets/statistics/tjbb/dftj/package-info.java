@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_STATISTICS_TJBB_JGDFTJ", name = "机构垫付统计表", parentId = "P2P_C_STATISTICS_TJBB", order = 4)
+package com.dimeng.p2p.console.servlets.statistics.tjbb.dftj;

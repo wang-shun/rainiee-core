@@ -1,0 +1,17 @@
+<%for(var i=0;i<data.length;i++){%>
+<div class="ub uinnh10 ub-pc c-wh b-top  fn-s-13">
+       <div class="width33 ub ub-pc ub-ac ">
+       	<%if(data[i].rankId==1){%>
+       		<div class=" win-base img-win1"></div>
+       	<%}else if(data[i].rankId==2){%>
+       		<div class=" win-base img-win2"></div>
+       	<%}else if(data[i].rankId==3){%>
+       		<div class=" win-base img-win3"></div>
+       	<%}else{%>
+       	<%=data[i].rankId%>
+       	<%}%>
+       </div>
+       <div class="width33 ub ub-pc ub-ac"><%=data[i].userName%></div>
+       <div class="width33 ub ub-pc ub-ac tx-al-c"><%=data[i].amount%>元</div>
+</div>
+<%}%>

@@ -1,0 +1,31 @@
+<div class='ub ub-ver fn-s-14 fn-c'>
+	<div>商品名称</div>
+	<div class='ub ub-f1' style='margin:.5rem;word-break: break-all;'>
+		<%=scoreMall.name%>
+	</div>
+	<div class="ub">
+		<span>
+			<%if(buyImmediately){%>
+			   所需价格
+			<%}else{%>
+			    所需积分
+		    <%}%>
+		</span>
+		<div class='ub-f1 ub fn-c-org ub-pe'>
+			<%if(buyImmediately){%> ¥
+			<%=scoreMall.amount%>
+			<%}else{%>
+			<%=scoreMall.score%>积分
+			<%}%>
+		</div>
+	</div>
+	<div class="pd-bt-10">
+		<input placeholder='请输入手机号码' name='mobile' id='mobile' type='text' maxlength='11' class='width100 radius hei-30 bd-b tx-al-c fn-s-14'>
+	</div>
+	<%if(isWithdrawPsd){ %>
+	<div>
+		<input placeholder='请输入交易密码' name='tranPwd' id='tranPwd' type='password' maxlength='8' class='width100 radius hei-30 bd-b tx-al-c fn-s-14'>
+	</div>
+	<%}%>
+		<span style="color: red;" id="errorMsg"></span>
+</div>

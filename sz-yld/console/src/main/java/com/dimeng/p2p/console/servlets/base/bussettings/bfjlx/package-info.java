@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_BASE_OPTSETTINGS_BFJLX", name = "标附件类型管理" ,parentId="P2P_C_BASE_BUSSETTINGS" ,order = 4)
+package com.dimeng.p2p.console.servlets.base.bussettings.bfjlx;

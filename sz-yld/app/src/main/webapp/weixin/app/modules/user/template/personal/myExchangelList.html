@@ -1,0 +1,12 @@
+
+<%for(var i = 0; i < data.length; i++){%>
+<div class="ub pd-all-5 ub-pc c-wh bd-t fn-s-13">
+       <div class="width30 ub ub-pc ub-ac"><%=data[i].comdName%></div>
+       <div class="width20 ub ub-pc ub-ac"><%=data[i].comdNum%></div>
+       <div class="width20 ub ub-pc ub-ac">
+       		<div class="mall-credit-ico"></div><%=data[i].comdScore%>
+        </div>
+       <div class="width30 ub ub-pc ub-ac tx-al-c"><%=data[i].orderTime%></div>
+</div>
+<%}%>
+

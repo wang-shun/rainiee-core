@@ -1,0 +1,43 @@
+ <div id="loginContent" class="hei-inherit">
+    <div class="ub ub-ver ub-f1 hei-inherit c-e">
+  
+
+        <div class="b-wh  uc-a02 mg-t-1 bc-withe"  > 
+            <div class="ub ub-ac    b-wh">
+                <div class="uinn-al8 fn-s-25">
+                    <div class=" b_image21 ub-img8 "> </div>
+                </div>
+                <div class="ub-f1 login t-wh1">
+                    <input placeholder="请输入新密码" id="password" name="password"  title="密码" validator="notEmpty;reg[<%=newPasswordRegex%>];" type="password" maxlength="20" ></input>
+
+                </div>
+                <div class=" b-image-hide" action="action:lookPwd"> </div>
+            </div>
+        </div>
+        <div class="pd-lr-5 line-h-20 fn-s-11 fn-c-blue" id="passwordReg"><%=passwordRegexContent%></div>
+	<!--	<div class="b-wh  uc-a02 mg-t-1 bc-withe" > 
+            <div class="ub ub-ac    b-wh">
+                <div class="uinn-al8 fn-s-25">
+                    <div class=" b_image21 ub-img8 "> </div>
+                </div>
+                <div class="ub-f1 login t-wh1">
+                    <input placeholder="确认新密码" name="rePassword"  title="密码" validator="notEmpty;" type="password" id="password2"  maxlength="20"></input>
+
+                </div>
+            </div>
+        </div>-->
+
+        <div class="ub ub-ac ub-pc umar-a21 c-orange uc-a02" action="action:submit">
+            <div class="ub ub-ac ub-pc t-wh uinnh5 ulev-app4">确&nbsp;&nbsp;定</div>
+        </div>
+        <div class="ub umar-a222" >
+           <!-- <div class="ub ub-f1 ub-pe fn-s-15 t-oran uinn-ar2"  action="user/password/passwordList">忘记密码</div> -->
+        </div>
+
+        <input type="hidden"  id='hidopenId'></input>
+        <input type="hidden"  id='hidaccessToken'></input>
+
+    </div>
+</div>
+
+

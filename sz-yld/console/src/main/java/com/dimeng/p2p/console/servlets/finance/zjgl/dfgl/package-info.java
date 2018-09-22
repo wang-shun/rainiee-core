@@ -1,0 +1,2 @@
+//@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_FINANCE_ZJGL_PTDFGL", name = "不良资产管理", parentId = "P2P_C_FINANCE_ZJGL", order = 5)
+package com.dimeng.p2p.console.servlets.finance.zjgl.dfgl;

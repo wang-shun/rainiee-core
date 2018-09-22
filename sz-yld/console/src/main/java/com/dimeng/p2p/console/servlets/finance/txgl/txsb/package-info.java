@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_FINANCE_TXGL_TXSB", name = "提现失败",parentId = "P2P_C_FINANCE_TXGL", order = 3)
+package com.dimeng.p2p.console.servlets.finance.txgl.txsb;

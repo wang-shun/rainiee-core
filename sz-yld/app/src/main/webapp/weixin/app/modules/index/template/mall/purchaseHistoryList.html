@@ -1,0 +1,16 @@
+<%for(var i = 0; i < purchaseList.length; i++){%>
+<div class="ub uinn-5 ub-pc c-wh bd-t fn-s-13">
+       <div class="width25 ub ub-pc ub-ac "><%=purchaseList[i].loginName%></div>
+       <div class="width25 ub ub-pc ub-ac"><%=purchaseList[i].comdNum%></div>
+       <div class="width25 ub ub-ac">
+       	<%if(purchaseList[i].comdPrices>0){%>
+       		<div class="mall-money-ico"></div><%=purchaseList[i].comdPrices%>
+       	<%}else{%>
+       		<div class="mall-credit-ico"></div><%=purchaseList[i].comdScore%>
+       	<%}%>
+       		
+        </div>
+       <div class="width25 ub ub-pc ub-ac tx-al-c"><%=purchaseList[i].orderTime%></div>
+</div>
+<%}%>
+

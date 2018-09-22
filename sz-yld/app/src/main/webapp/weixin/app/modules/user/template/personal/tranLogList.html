@@ -1,0 +1,26 @@
+	<%for(var i=0;i<data.length;i++){%>
+	<div class="mg-t-5 bc-withe pd-all-10">
+		<div class="ub fn-s-14 fn-c">
+			<div class="width50 ">
+				<%=data[i].tranType%>
+			</div>
+			<div class="width50  tx-al-r">
+				余额：<font class="fn-c-org"><%=data[i].revAmount%></font>
+			</div>
+		</div>
+		<div class="ub fn-s-15">
+			<div class="width60 fn-s-12 line-h-20">
+				<%=data[i].tranTime%>
+			</div>
+			<%if(data[i].expAmount!=0){%>
+			<div class="width40 fn-c-red tx-al-r line-h-20">
+				<%='-'+(data[i].expAmount*1).toFixed(2)%>
+			</div>
+			<%}if(data[i].inAmount!=0){%>
+				<div class="width40 fn-c-blue tx-al-r line-h-20">
+				<%='+'+(data[i].inAmount*1).toFixed(2)%>
+			</div>
+			<%}%>
+		</div>
+	</div>
+	<%}%>

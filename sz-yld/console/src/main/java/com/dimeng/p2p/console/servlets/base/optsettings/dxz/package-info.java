@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_BASE_OPTSETTINGS_DXZTYPE", name = "定向组管理", parentId = "P2P_C_BASE_OPTSETTINGS", order = 13)
+package com.dimeng.p2p.console.servlets.base.optsettings.dxz;

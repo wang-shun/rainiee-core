@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Review id="20160225富友托管代码review">
+  <ReviewIssue id="IL98RJJD">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 17:58:20:329 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:54:19:907 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="42">src/main/java/com/dimeng/p2p/escrow/fuyou/face/TransferFace.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>这个方法的参数也太多了吧！可不可以弄个实体类保存这些参数？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL98UKZX">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:00:42:189 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:54:13:154 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="119">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYAdvanceExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>time定义的有点多余了吧？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL991A01">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:05:54:529 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:54:08:241 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="710">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYAutoTenderRepaymentExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>time多余的定义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL992JK7">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:06:53:575 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:54:00:971 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="59">src/main/java/com/dimeng/p2p/escrow/fuyou/face/TransactionQueryFace.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>用实体类或是map代替这些参数会不会更好点？</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL998LFL">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:11:35:937 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:52:31:257 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="126">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYPrepaymentExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>time多余的定义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99A8W2">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:12:52:994 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:52:24:702 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="137">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYPrepaymentExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>多余的定义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99BBAQ">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:13:42:770 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:52:15:878 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="141">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYPrepaymentExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>多余的定义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99BQDY">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:14:02:326 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:51:52:353 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="177">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYPrepaymentExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>多余的定义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99D3VG">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:15:06:460 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:51:42:202 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="89">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYPTAdvanceExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>太多的String常量定义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99EWE2">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:16:30:074 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 14:51:01:169 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="164">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYRepaymentExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>多余的定义</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99GHZJ">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:17:44:719 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:16:11:815 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="227">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYRepaymentExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>为什么不直接把这个if判断放在SQL脚本里？</Summary>
+    <Description></Description>
+    <Annotation>重新排查方法实现</Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99LB4B">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:21:29:099 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:11:57:455 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="115">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYTenderCancelExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>变量的定义还是用小写跟常量有所区别比较好。</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL99MVFD">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 18:22:42:073 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 14:08:54:869 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>饶宇军</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="138">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYTenderCancelExecutor.java</File>
+    <Type>item.type.label.suggestion</Type>
+    <Severity>item.severity.label.normal</Severity>
+    <Summary>富友的返回码最好还是定义一个枚举类保存判断比较好。</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+</Review>

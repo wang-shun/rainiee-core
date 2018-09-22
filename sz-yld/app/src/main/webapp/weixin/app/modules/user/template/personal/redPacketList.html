@@ -1,0 +1,34 @@
+	<%for(var i=0;i<data.length;i++){%>
+	<div class="ub ub-ac bc-withe mg-t-10" >
+		<div class="redpacket" >
+		</div>
+		<div class="ub-f1 pd-lr-5">
+		<div class=""><font class="fn-c-org fn-s-15"><%=data[i].amount%></font> 元</div>
+		<div class="ub">
+		<div class="line-h-20 width60 fn-s-12 fn-c-gray "><%=!isNaN(data[i].investUseRule)&&data[i].investUseRule*1>0 ? '投资满'+data[i].investUseRule+'元可以使用' :'无限制' %>
+			
+			</div>
+			<%if(data[i].status=='WSY'){%>
+			<div class=" width40 tx-al-c fn-s-12 exp-more fn-c-blue" action="index/index/projectInvestment" data-id="<%=data[i].id%>">
+			去投资
+			</div>
+			<%}%>
+		</div>
+		<div class="ub">
+		<div class="fn-c-gray width50 ut-s "><%=data[i].type%></div>
+			<div class=" width50 tx-al-r  ">
+			过期日期:<%=data[i].timeOut%>
+			</div>
+		</div>
+		</div>
+		<%if(data[i].status=='WSY'){%>
+		<span class="exp-r-org">未使用</span>
+		<%}%>
+		<%if(data[i].status=='YSY'){%>
+		<span class="exp-r-gray">已使用</span>
+		<%}%>
+		<%if(data[i].status=='YGQ'){%>
+		<span class="exp-r-gray">已过期</span>
+		<%}%>
+	</div>
+	<%}%>

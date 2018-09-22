@@ -1,0 +1,36 @@
+<div   id="bottom">	
+		
+			<div class="ub ub-ac ub-pc umar-at2 fn-s-14 c-e ">
+	              <div class="ub ub-f1">
+	                       <%if(DMJS.userInfo){%>
+	                        <div class="pd-all-10"  action="user/personal/userInfo">您好！<%=DMJS.userInfo.accountName%></div>
+	                   <%}else{%>
+	                        <div class="pd-all-10" action="user/personal/login">登录</div><div class="pd-bt-10">|</div><div class="pd-all-10" action="user/personal/register">注册</div>
+	                   <%}%>
+	              </div> 
+	              <div class="ub pd-r-20" action="action:goTop"><div>TOP</div><div class="bt-top"></div></div> 
+			</div>
+	        
+	         <div class="ub c-wh pd-bt-10">
+	             <div class="ub ub-f1 ub-ac ub-pc ub-ver uinn-pb1">
+	                <div class="ub fn-s-14 ">
+	                   <div class="ub-f1  mar-ar1 t-9" action="index/index/appDownload"><a  href="javascript:void(0);" class='t-9' style='text-decoration: inherit;' >客户端</a></div> 
+	                  <div class="ub-f1  t-3"><a href="javascript:void(0)"  target="_blank" style="text-decoration: none;color:#333;">触屏版</a></div>
+	                  <div class="ub-f1  mar-aL1 t-9"><a href="<%=Config.base('envOption').PCWebsite%>"  target="_self"  class='t-9' style="text-decoration: none;">电脑版</a></div>
+	                </div>
+	                <div class="umar-at ulev-app2 ub ub-ac" style="border-radius:50px; padding: 0.5rem 1rem; border:1px solid #1e4aa8">
+	                	<div class="bt-phone"></div><div class="mg-l-5  fn-s-12">客服热线：<a id="tel" class="fn-c-blue" href="tel:<%=(DMJS.tel+"").replace(/\s*-\s/g,"")%>"><%=DMJS.tel?DMJS.tel :DMJS.CommonTools.getICP()%></a></div>
+	                </div>
+	                <div class="ub ub-ac ub-pc  umar-at ulev-app2">
+	                    <div id="ICP"></div>
+	                </div>
+                 </div> 
+	         </div>
+</div>
+<script type="text/javascript">
+ function appdow(){
+	var serverUrl="/app/downloadApp.htm";
+	    window.location = serverUrl;
+ }
+
+</script>

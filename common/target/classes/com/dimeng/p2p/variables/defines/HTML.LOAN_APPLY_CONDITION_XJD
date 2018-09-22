@@ -1,0 +1,5 @@
+    <ul class="introduce clearfix">
+    	<li>•${SYSTEM.CREDIT_LOAN_AGE_MIN}-${SYSTEM.CREDIT_LOAN_AGE_MAX}周岁的中国公民</li>
+        <li>• 在现单位工作满3个月</li>
+        <li>• 月收入2000以上 </li>                                   
+    </ul>                               

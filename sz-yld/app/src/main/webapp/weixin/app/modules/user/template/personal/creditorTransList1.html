@@ -1,0 +1,71 @@
+<%for(var i=0;i<list.length;i++){%>
+	<div class=" c-wh  uinn-a12 b-top-bottom umar-ab1 lus-b "    bidid="<%=list[i].bidId%>" creId='<%=list[i].creId%>' creditorId='<%=list[i].id%>' dataFlag='<%=list[i].flag%>'>
+		<div class="ub b-bottom" >
+			<div class=" ub umar-ar6  uinn-a7 uinn-a12 width78">
+				<!--<span class="t-oran ub ub-pc ub-ac ulev-app2 lb-border0 btn_wh22 lin-hei15" >
+                  	<%=list[i].flag%>                  	
+                </span>-->
+                <span class="ellipse-1 fn-s-13 ub ub-pc ub-ac fn-c-blue mg-l-10"><%=list[i].flag%></span>
+				<span class=" ulev-18 c-gray  ub ub-pc ub-ac t-3 uinn-a1-center"><%=DMJS.CommonTools.renderStringLen(list[i].creditorTitle,12)%></span>
+			</div>
+			<p class="fn-s-13 uinn-a12 <%=list[i].status=='ZRZ'?'fn-c-blue':'fn-c-org'%>" id="zrstatus"><%=list[i].status=="ZRZ"?"可购买":"已转让"%></p>
+		</div>
+		<div class="ub" >
+			<div class="width100">
+				<div class="  umar-ar6 pd-lr-5 umar-top umar-ab2">
+					<div class=" ub ub-ver">
+						<div class=" ulev-app15 ub ">
+								<span class="ub ub-ac width40 tx-c c-black pos-relative">
+			                            <ul>
+			                                <li class="ulev-app2 t-a">
+			                                	<%if(list[i].status!="ZRZ"){%>
+			                                	<span class="ulev-app4"><%=fmoney((list[i].salePrice*1).toFixed(2)*1)%></span>
+			                                	<span class="ulev-app2">元</span>
+			                                	<%}else{%>	
+			                                	<span class="fn-c-blue ulev-app4"><%=fmoney((list[i].salePrice*1).toFixed(2)*1)%></span>
+			                                	<span class="fn-c-blue ulev-app2">元</span>
+			                                	<%}%>
+			                                </li>
+			                                <li class="t-a ulev-app2">转让金额</li>
+										</ul>
+								</span>
+								<span class="ub ub-ac f-red po-r">
+			                            <ul>
+			                            	<li class="ulev-app2 t-a">
+			                            		<span class="t-a ulev-app2">债权价值：</span>
+			                            		<%if(list[i].status!="ZRZ"){%>
+			                            		<span class="ulev-app4"><%=fmoney((list[i].creditorVal*1).toFixed(2)*1)%></span>
+			                            		<span class="ulev-app2">元</span>
+			                            		<%}else{%>
+			                            		<span class="fn-c-blue ulev-app4"><%=fmoney((list[i].creditorVal*1).toFixed(2)*1)%></span>
+			                            		<span class="fn-c-blue ulev-app2">元</span>
+			                            		<%}%>
+			                            		
+			                            	</li>
+											<li class="t-a ulev-app2">
+												<span class="t-a ulev-app2">待收本息：</span>
+												<%if(list[i].status!="ZRZ"){%>
+												<span class="ulev-app4"><%=fmoney((list[i].revInterest*1).toFixed(2)*1)%></span>
+			                            		<span class="ulev-app2">元</span>
+												<%}else{%>
+			                            		<span class="fn-c-blue ulev-app4"><%=fmoney((list[i].revInterest*1).toFixed(2)*1)%></span>
+			                            		<span class="fn-c-blue ulev-app2">元</span>
+			                            		<%}%>
+											</li>
+										</ul>
+								</span>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ub b-top" >
+			<div class=" ub umar-ar6  uinn-a7 umar-at width78">
+				剩余期数
+			</div>
+			<div class="umar-at t-3">
+				<%=list[i].remainCycle%>/<%=list[i].cycle%>
+			</div>
+		</div>
+	</div>
+<%}%>

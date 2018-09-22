@@ -1,0 +1,38 @@
+<ul class="creditorBuy" id='creditorBuy'>
+	<li>债权价值(元)：
+		<%=parseFloat(sourceZqPrice).toFixed(2)%>
+	</li>
+	<li>转让费率(%)：
+		<%=parseFloat(transferRate).toFixed(2)%>
+	</li>
+	<li class="ub">
+		<div>转让价格：</div>
+		<div>
+			<%if(zqzrMin=="0.00" && zqzrMax=="0.00"){%>
+				<input placeholder="请输入转让价格" name="salePrice" id="salePrice" type="number" class="luinn-al3 uc-a02 width95 lhei-22 bd-b ulev-13">
+			<%}else{%>
+				<input placeholder="<%=zqzrMin%>~<%=zqzrMax%>" name="salePrice" id="salePrice" type="number" class="luinn-al3 uc-a02 width95 lhei-22 bd-b ulev-13">
+			<%}%>
+		</div>
+		<span class="unit-yuan">元</span>
+	</li>
+	<%if(hkfs == 'YCFX'){%>
+	<li>
+		<span>实际转让价格(元)：</span>
+		<span id="lastPrice"></span>
+	</li>
+	<li>
+		实际转让价格=转让价格-剩余利息
+	</li>
+	<%}%>
+	<li class="umar-at ub">
+		<div>交易密码：</div>
+		<div>
+			<input placeholder="请输入交易密码" name="tranPwd" id="tranPwd" type="password" maxlength="20" class="luinn-al3 uc-a02 width95 lhei-22 bd-b ulev-13">
+
+		</div>
+	</li>
+	<li>
+		<p id='tips' class="tx-al-l-zy ulev-app2 fn-c-org "></p>
+	</li>
+</ul>

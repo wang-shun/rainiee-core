@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Property>
+  <Review id="DEFAULT">
+    <Description>property.default.description</Description>
+    <Author></Author>
+    <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">1970-01-01 :: 00:00:00:000 GMT-10:00</CreationDate>
+    <Directory>review</Directory>
+    <Reviewers></Reviewers>
+    <Files/>
+    <FieldItems>
+      <FieldItem id="Type" default="item.label.unset">
+        <Entry name="item.label.unset"/>
+        <Entry name="item.type.label.codingStandards"/>
+        <Entry name="item.type.label.programLogic"/>
+        <Entry name="item.type.label.optimization"/>
+        <Entry name="item.type.label.usability"/>
+        <Entry name="item.type.label.clarity"/>
+        <Entry name="item.type.label.missing"/>
+        <Entry name="item.type.label.irrelevant"/>
+        <Entry name="item.type.label.suggestion"/>
+        <Entry name="item.type.label.other"/>
+      </FieldItem>
+      <FieldItem id="Severity" default="item.label.unset">
+        <Entry name="item.label.unset"/>
+        <Entry name="item.severity.label.critical"/>
+        <Entry name="item.severity.label.major"/>
+        <Entry name="item.severity.label.normal"/>
+        <Entry name="item.severity.label.minor"/>
+        <Entry name="item.severity.label.trivial"/>
+      </FieldItem>
+      <FieldItem id="Resolution" default="item.label.unset">
+        <Entry name="item.label.unset"/>
+        <Entry name="item.resolution.label.validNeedsfixing"/>
+        <Entry name="item.resolution.label.validFixlater"/>
+        <Entry name="item.resolution.label.validDuplicate"/>
+        <Entry name="item.resolution.label.validWontfix"/>
+        <Entry name="item.resolution.label.invalidWontfix"/>
+        <Entry name="item.resolution.label.unsureValidity"/>
+      </FieldItem>
+      <FieldItem id="Status" default="item.status.label.open">
+        <Entry name="item.status.label.open"/>
+        <Entry name="item.status.label.resolved"/>
+        <Entry name="item.status.label.closed"/>
+        <Entry name="item.status.label.reopened"/>
+      </FieldItem>
+    </FieldItems>
+    <Filters>
+      <Phase name="phase.individual" enabled="true">
+        <Filter name="Interval" value="7" enabled="false"/>
+        <Filter name="Reviewer" value="item.reviewer.label.automatic" enabled="true"/>
+        <Filter name="Type" value="item.label.unset" enabled="false"/>
+        <Filter name="Severity" value="item.label.unset" enabled="false"/>
+        <Filter name="AssignedTo" value="" enabled="false"/>
+        <Filter name="Resolution" value="item.label.unset" enabled="false"/>
+        <Filter name="Status" value="item.status.label.open" enabled="false"/>
+        <Filter name="File" value="" enabled="false"/>
+      </Phase>
+      <Phase name="phase.team" enabled="true">
+        <Filter name="Interval" value="7" enabled="false"/>
+        <Filter name="Reviewer" value="" enabled="false"/>
+        <Filter name="Type" value="item.label.unset" enabled="false"/>
+        <Filter name="Severity" value="item.label.unset" enabled="false"/>
+        <Filter name="AssignedTo" value="" enabled="false"/>
+        <Filter name="Resolution" value="item.label.unset" enabled="true"/>
+        <Filter name="Status" value="item.status.label.open" enabled="false"/>
+        <Filter name="File" value="" enabled="false"/>
+      </Phase>
+      <Phase name="phase.rework" enabled="true">
+        <Filter name="Interval" value="7" enabled="false"/>
+        <Filter name="Reviewer" value="" enabled="false"/>
+        <Filter name="Type" value="item.label.unset" enabled="false"/>
+        <Filter name="Severity" value="item.label.unset" enabled="false"/>
+        <Filter name="AssignedTo" value="item.reviewer.label.automatic" enabled="true"/>
+        <Filter name="Resolution" value="item.label.unset" enabled="false"/>
+        <Filter name="Status" value="item.status.label.open" enabled="true"/>
+        <Filter name="File" value="" enabled="false"/>
+      </Phase>
+    </Filters>
+  </Review>
+  <Review id="20160225富友托管代码review">
+    <Description>20160225富友托管代码review</Description>
+    <Author>邓文武</Author>
+    <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-02-25 :: 14:44:54:508 CST</CreationDate>
+    <Directory>review\\20160225</Directory>
+    <Reviewers>
+      <Entry id="何石平" name="何石平"/>
+      <Entry id="凌元杰" name="凌元杰"/>
+      <Entry id="孙秋艳" name="孙秋艳"/>
+      <Entry id="张旭" name="张旭"/>
+      <Entry id="林辉" name="林辉"/>
+      <Entry id="罗水文" name="罗水文"/>
+      <Entry id="胡光泽" name="胡光泽"/>
+      <Entry id="邓文武" name="邓文武"/>
+      <Entry id="银科" name="银科"/>
+      <Entry id="饶宇军" name="饶宇军"/>
+    </Reviewers>
+    <Files>
+      <Entry name="src/main/java/com/dimeng/p2p/AbstractFuyouServlet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/AbstractDzglServlet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/BidQuery.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/ChargeWithdrawQuery.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/CzdzList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/DfdzList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/GybdzList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/HkdzList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/package-info.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/TbdzList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/TxdzList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/UserList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/ZqzrdzList.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/fuyou/FyouLoan.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/fuyou/FyouNotLoan.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/fuyou/FyouSbdf.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/console/servlets/fuyou/FyouXxczshtg.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/AbstractEscrowService.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/AutoManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/BalanceManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/BankCardManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/BankManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/BidFaceMagageImp.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/BidManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/ChargeManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/ChargeWithdrawImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/ComManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/InformManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/OfflineChargeManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/OrderManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/PhoneManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/PrepaymentManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/PublicManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/QueryManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/TransactionQueryManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/TransferManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/UpdateInfoManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/UserAcctQueryManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/UserManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/WithDrawManageImpl.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYActivityExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYAdvanceExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYAutoTenderOrderExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYAutoTenderRepaymentExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYBidExchangeExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYChargeOrderExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYExperTenderExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYMallChangeExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYMallRefundExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYPrepaymentExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYPTAdvanceExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYRepaymentExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYTenderCancelExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYTenderConfirmExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYTenderOrderExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYTransferExecutor.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/BalanceFace.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/BankQueryFace.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/BidCancelFace.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/BidFace.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/ChargeWithdrawFace.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/TransactionQueryFace.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/TransferFace.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/face/UserinfoQuery.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/AutoManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/BalanceManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/BankCardManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/BankManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/BidFaceManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/BidManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/ChargeManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/ChargeWithdrawManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/ComManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/InformManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/OfflineChargeManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/OrderManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/PhoneManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/PrepaymentManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/PublicManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/QueryManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/TransactionQueryManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/TransferManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/UpdateInfoManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/UserAcctQueryManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/UserManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/service/WithDrawManage.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/task/AdvanceTask.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/task/BidTask.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/task/LoanTask.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/task/PaymentTask.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/task/PrepaymentTask.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/task/TransferTask.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/BackCodeInfo.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/Base64.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/HttpClientHandler.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/MchntTxnSsn.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/PayUtil.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/PoundageUtil.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/SecurityUtils.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/util/XmlHelper.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/escrow/fuyou/variables/FuyouVariable.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ChargeInform.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/FyouBid.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/FyouCharge.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/FyouDonationBid.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/FyouPayment.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/FyouPrepayment.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/FyouSbdf.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/FyouWithdraw.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/RefundInform.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/ChangeCardRet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/ChargeNotice.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/ChargeRet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/ComRegisterRet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/PhoneRet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/UserRegisterRet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/WithdrawNotice.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/WithdrawRet.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/UpdateInform.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/pay/servlets/fuyou/WithdrawInform.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouBank.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouBankcard.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouChangeCard.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouComRegister.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouPhoneUpdate.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouQueryBank.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/FyouUserRegister.java"/>
+      <Entry name="src/main/java/com/dimeng/p2p/user/servlets/fuyou/Test.java"/>
+    </Files>
+    <FieldItems>
+      <FieldItem id="Type" default="item.label.unset">
+        <Entry name="item.label.unset"/>
+        <Entry name="item.type.label.codingStandards"/>
+        <Entry name="item.type.label.programLogic"/>
+        <Entry name="item.type.label.optimization"/>
+        <Entry name="item.type.label.usability"/>
+        <Entry name="item.type.label.clarity"/>
+        <Entry name="item.type.label.missing"/>
+        <Entry name="item.type.label.irrelevant"/>
+        <Entry name="item.type.label.suggestion"/>
+        <Entry name="item.type.label.other"/>
+      </FieldItem>
+      <FieldItem id="Severity" default="item.label.unset">
+        <Entry name="item.label.unset"/>
+        <Entry name="item.severity.label.critical"/>
+        <Entry name="item.severity.label.major"/>
+        <Entry name="item.severity.label.normal"/>
+        <Entry name="item.severity.label.minor"/>
+        <Entry name="item.severity.label.trivial"/>
+      </FieldItem>
+      <FieldItem id="Resolution" default="item.label.unset">
+        <Entry name="item.label.unset"/>
+        <Entry name="item.resolution.label.validNeedsfixing"/>
+        <Entry name="item.resolution.label.validFixlater"/>
+        <Entry name="item.resolution.label.validDuplicate"/>
+        <Entry name="item.resolution.label.validWontfix"/>
+        <Entry name="item.resolution.label.invalidWontfix"/>
+        <Entry name="item.resolution.label.unsureValidity"/>
+      </FieldItem>
+      <FieldItem id="Status" default="item.status.label.open">
+        <Entry name="item.status.label.open"/>
+        <Entry name="item.status.label.resolved"/>
+        <Entry name="item.status.label.closed"/>
+        <Entry name="item.status.label.reopened"/>
+      </FieldItem>
+    </FieldItems>
+    <Filters>
+      <Phase name="phase.individual" enabled="true">
+        <Filter name="Interval" value="7" enabled="false"/>
+        <Filter name="Reviewer" value="item.reviewer.label.automatic" enabled="true"/>
+        <Filter name="Type" value="item.label.unset" enabled="false"/>
+        <Filter name="Severity" value="item.label.unset" enabled="false"/>
+        <Filter name="AssignedTo" value="" enabled="false"/>
+        <Filter name="Resolution" value="item.label.unset" enabled="false"/>
+        <Filter name="Status" value="item.status.label.open" enabled="false"/>
+        <Filter name="File" value="" enabled="false"/>
+      </Phase>
+      <Phase name="phase.team" enabled="true">
+        <Filter name="Interval" value="7" enabled="false"/>
+        <Filter name="Reviewer" value="" enabled="false"/>
+        <Filter name="Type" value="item.label.unset" enabled="false"/>
+        <Filter name="Severity" value="item.label.unset" enabled="false"/>
+        <Filter name="AssignedTo" value="" enabled="false"/>
+        <Filter name="Resolution" value="item.label.unset" enabled="true"/>
+        <Filter name="Status" value="item.status.label.open" enabled="false"/>
+        <Filter name="File" value="" enabled="false"/>
+      </Phase>
+      <Phase name="phase.rework" enabled="true">
+        <Filter name="Interval" value="7" enabled="false"/>
+        <Filter name="Reviewer" value="" enabled="false"/>
+        <Filter name="Type" value="item.label.unset" enabled="false"/>
+        <Filter name="Severity" value="item.label.unset" enabled="false"/>
+        <Filter name="AssignedTo" value="item.reviewer.label.automatic" enabled="true"/>
+        <Filter name="Resolution" value="item.label.unset" enabled="false"/>
+        <Filter name="Status" value="item.status.label.open" enabled="true"/>
+        <Filter name="File" value="" enabled="false"/>
+      </Phase>
+    </Filters>
+  </Review>
+</Property>

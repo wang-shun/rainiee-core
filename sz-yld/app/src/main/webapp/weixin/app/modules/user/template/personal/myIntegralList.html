@@ -1,0 +1,12 @@
+
+<%for(var i=0; i < data.length; i++){%>
+<div class="ub pd-all-5 border_bottomd">
+			<div class="ub width33 ub-ver">
+				<div class="ub  ub-ac ub-pc "><%=(data[i].getDate).substring(0,10)%></div>
+				<div class="ub  ub-ac ub-pc"><%=(data[i].getDate).substring(10)%></div>
+			</div>
+	    	
+	    	<span class="ub width33 ub-ac ub-pc fn-c-org">+<%=data[i].getScore%></span>
+	    	<span class="ub width33 ub-ac ub-pc "><%=data[i].getType%></span>
+</div>
+<%}%>

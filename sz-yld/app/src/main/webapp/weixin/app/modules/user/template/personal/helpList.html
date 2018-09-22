@@ -1,0 +1,11 @@
+<%for(var i=0;i<data.length;i++){%>
+<div class="ub ub-pc pd-all-10 ub-ac bc-withe  mg-t-1 " data-id="<%=data[i].id%>">
+		<div class="ub-f1 ub ub-ac">
+			<div class="fn-s-15 fn-c"><%=DMJS.CommonTools.renderStringLen(data[i].title,18)%></div>
+			<div class="fn-s-11 pd-bt-3"><%=data[i].releaseTime%></div>
+		</div>
+		<div class="img-more"></div>
+</div>
+<%}if(data.length<=0){%>
+	<div class="ub uinn-pa2 ulev-app4 ub-pc ub-ac t-ddd">暂无数据</div>
+<%}%>

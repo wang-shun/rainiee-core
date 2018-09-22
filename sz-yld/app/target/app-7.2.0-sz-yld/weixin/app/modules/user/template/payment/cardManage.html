@@ -1,0 +1,33 @@
+<div class="hei-inherit bg-c-gray pd-bt-20 ">
+	<%for(var i=0;i<myBankList.length;i++){%>
+	<div class="ub bc-withe mg-t-1 JSMoveHOrs" id="cardInfo" data-id="<%=myBankList[i].id%>" data-bankname="<%=myBankList[i].bankname%>" data-number="<%=myBankList[i].bankNumber%>">
+		<div class="width60 pd-all-10 fn-s-15 fn-c">
+			<%=myBankList[i].bankname%>
+		</div>
+		<div class="width35 pd-all-10 fn-s-13 bc-withe">尾号
+			<%=(myBankList[i].bankNumber).substring(myBankList[i].bankNumber.length-4)%>
+		</div>
+
+	</div>
+
+	<%}%>
+	<%if(myBankList.length<=0&&flag){%>
+	<div class="ub-f1 width90 tx-c mar-0-auto line-h-35 b-c-blue mg-r-5 select-yhk" id='select_card'>
+
+		<div class="fn-s-15 fn-c-white" id='acard'>查询更换银行卡</div>
+
+	</div>
+	<%}else if(flag){%>
+	<div class="mg-t-10 mg-b-20 fn-c-blue ub ub-pe pd-lr-5">温馨提示：银行卡绑定数量上限为1张</div>
+	<div class="ub-f1 width90 tx-c mar-0-auto line-h-35 b-c-blue mg-r-5 select-yhk" id='select_card'>
+
+		<div class="fn-s-15 fn-c-white" id='acard'>查询更换银行卡</div>
+
+	</div>
+	<%}else{%>
+	<div class="mg-t-10 mg-b-20 fn-c-blue ub ub-pe pd-lr-5">温馨提示：银行卡绑定数量上限为1张</div>
+	<div class="ub-f1 width90 tx-c line-h-35 b-c-blue mar-0-auto select-yhk" id='charge'>
+		<div class="fn-s-15 fn-c-white">申请更换银行卡</div>
+	</div>
+	<%}%>
+</div>

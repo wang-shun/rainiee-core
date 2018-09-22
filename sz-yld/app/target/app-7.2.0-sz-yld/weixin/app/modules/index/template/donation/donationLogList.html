@@ -1,0 +1,7 @@
+<%for(var i=0;i<data.length;i++){%>
+<div class="ub uinnh10 ub-pc c-wh b-top fn-s-13">
+       <div class="width33 ub ub-pc ub-ac "><%=data[i].userName.substring(0,2)%><%=data[i].userName.substring(2,data[i].userName.length-2).replace(/./g,'*')%><%=data[i].userName.substring(data[i].userName.length-2)%></div>
+       <div class="width33 ub ub-pc ub-ac"><%=data[i].loanAmount%>元</div>
+       <div class="width33 ub ub-pc ub-ac tx-al-c"><%=data[i].locanTime%></div>
+</div>
+<%}%>

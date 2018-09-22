@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_FUYOU_USER_BALANCE", name = "用户余额查询", parentId = "P2P_C_FUYOUDZGL", order = 0)
+package com.dimeng.p2p.console.servlets.finance.fuyou.dzgl.userbalance;

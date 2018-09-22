@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_FINANCE_ZJGL_FKCJJL", name = "放款成交记录",parentId = "P2P_C_FINANCE_ZJGL", order =4)
+package com.dimeng.p2p.console.servlets.finance.zjgl.fkcjjl;

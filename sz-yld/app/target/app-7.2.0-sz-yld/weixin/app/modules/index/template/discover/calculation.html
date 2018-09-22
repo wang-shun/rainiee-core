@@ -1,0 +1,57 @@
+<div class="fn-s-13">
+       <div class="fn-c-white hei-80 bg-c-blue pd-all-10">
+       	   <div class="fn-s-15">收益描述:</div>
+	       <div class="ub mg-t-10" style="word-break: break-all;">
+	       		<div class="width50">出借金额(元):<%=amount%></div>
+	       		<div class="width50">应收利息(元):<%=totalInterest%></div>
+	       </div>
+	       
+	       <div class="mg-t-10">您将在<%=loanTime%><%=repaymentWay=='5'?'天':'个月'%>后收回全部本息</div>
+       </div>
+       <div class="ub" style="padding-right: .3rem;" id="caltDetail">
+       	    
+       </div>
+       
+       <div>
+       	<%for(var i = 0; i < repaymentDetail.length; i++){%>
+       	   <div class="bc-withe">
+		        <div class="ub ">
+		       	   <div class="ub ub-ac ub-pc" style="width:16%; margin: 1.8rem 0;">
+		       	   	第<%=i+1%>期
+		       	   </div>
+		       	   <div class="ub ub-ver ub-ac ub-pc">
+		       	   	   <div style="width:.2rem ; background-color: #ffb514;" class="ub ub-f1"></div>
+		       	   	   <div class="ub ub-pc ub-ac"><div class="ca-circle"></div></div>
+		       	   	   <div style="width:.2rem ; background-color:#ffb514;" class="ub ub-f1"></div>
+		       	   </div>
+		       	   <div class="width40" style="margin: 1.8rem 0 0 .5rem;word-break: break-all;" >
+		       	   		<div>
+		       	   			应收本息: <span class="fn-c-org"><%=repaymentDetail[i].repaymentbx%></span>
+		       	   		</div>
+		       	   		<div style="margin-top:.5rem ;">
+		       	   			应收本金: <span class="fn-c-org"><%=repaymentDetail[i].monthPrincipal%></span>
+		       	   		</div>
+		       	   </div>
+		       	   <div class="width40" style="word-break: break-all; margin: 1.8rem 0;" >
+		       	   		<div>
+		       	   			应收利息: <span class="fn-c-org"><%=repaymentDetail[i].interest%></span>
+		       	   		</div>
+		       	   		<div style="margin-top:.5rem ;">
+		       	   			剩余本金: <span class="fn-c-org"><%=repaymentDetail[i].remainPrincipal%></span>
+		       	   		</div>
+		       	   </div>
+		       </div>
+       	   </div>
+	       	   <%if(i<repaymentDetail.length-1){%>
+	       	   <div class="bg-c-gray ub">
+	       	   	        <div style="width:16%;"></div>
+	       	   	        <div class="ub ub-ac ub-pc" style="width:1rem">
+	       	   	          <div style="width:.2rem ;height: .8rem; background-color: #ffb514;" class="ub"></div>
+	       	   	        </div>
+	       	   </div>
+	       	   <%}%>
+       	  <%}%>
+       </div>
+       
+        
+</div>

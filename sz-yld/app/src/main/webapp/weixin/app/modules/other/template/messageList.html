@@ -1,0 +1,17 @@
+
+<%for(var i=0;i<data.length;i++){%>
+<div class="ub ub-ver b-top-bottom umar-at2  umar-t15 c-wh" action="action:readLetter['<%=data[i].id%>']">
+		             <div class="ub uinn-3" style="word-break:break-all;word-wrap:break-word;">
+		                <div class="ub <%=data[i].status=='WD' ? 'img-close' : 'img-open'%> mar-a" id="img"></div>
+		                <div class="ub ub-f1 fn-s-13 fn-c" id="msgTitle"><%=data[i].title%></div>
+		                 <div class="ub fn-s-13 fn-c" ><span><%=data[i].sendTime%></span></div>
+		             </div>
+	
+		             <div   id="">
+			             <input type="hidden" id="status" value="" >
+			             <div class="  fn-s-12  line-h-20  luinn-57  ut-s">
+			                   <%=data[i].content%>
+			             </div>
+		             </div>
+	   </div>
+  <%}%>

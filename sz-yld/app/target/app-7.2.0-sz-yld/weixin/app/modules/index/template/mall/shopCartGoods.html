@@ -1,0 +1,45 @@
+<!--购物车列表-->
+<%for(var goods in list){%>
+<%if(list[goods].isCanScore=="no"&&!allowsBalance){
+		continue;
+	}else{
+		var num = list[goods].num>list[goods].stock?list[goods].stock:list[goods].num;
+		%>
+<div class="ub bd-t pd-all-8" goodsId="<%=list[goods].carId%>">
+	<div class="not_selected" divType="select"></div>
+	<div class="mallproduct" style='<%=list[goods].image?"background-image:url("+list[goods].image+")":""%>;'></div>
+	<div class="ub ub-ver pd-l-10 ub-f1">
+		<div class="ub">
+			<%=list[goods].name%>
+		</div>
+		<div class="ub mg-t-10 u-width7">
+			<div class="uwh-tBtn2_2 b_rectangle_right <%=(num<=1)?'bc-gray1':'bc-withe'%> " divType="reduce">
+				<div class="ub-img8 b_rectangle_reduce btn_wh1" divType="reduce"></div>
+			</div>
+			<div class="uwh-tBtn3_2 b_rectangle_center" selectNum="<%=list[goods].num%>">
+				<%=num%>
+			</div>
+			<div class="uwh-tBtn2_2 b_rectangle_left" divType="add">
+				<div class="ub-img8 b_rectangle_add btn_wh1" divType="add"></div>
+			</div>
+		</div>
+		<div class="ub ub-ac ub-f1 fn-c-org">
+			单价：
+			<%if(list[goods].amount > 0 && list[goods].isCanMoney == "yes"&&allowsBalance){%>¥
+			<%=list[goods].amount%>
+			<%}%>
+			<%if(list[goods].amount > 0 && list[goods].score > 0 && list[goods].isCanScore == "yes" && list[goods].isCanMoney == "yes"&&allowsBalance){%>/
+			<%}%>
+			<%if(list[goods].score > 0 && list[goods].isCanScore == "yes"){%>
+			<%=list[goods].score%>积分
+			<%}%>
+
+		</div>
+		<div class="ub">
+			<div class="t-rb9 ub-f1">库存：
+				<%=list[goods].stock%>
+			</div>
+		</div>
+	</div>
+</div>
+<%}}%>

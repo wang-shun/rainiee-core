@@ -1,0 +1,74 @@
+<%for(var i=0;i<list.length;i++){%>
+	<div class=" c-wh  uinn-a12 b-top-bottom umar-ab1 lus-b "    bidid="<%=list[i].id%>" pulicdate="<%=list[i].publicDate%>">
+	    
+	    <div class="bid-jl-xs-info">
+	    	<%if(list[i].isJlb=="true"){%>
+			   <i class="jl-icon"></i>
+		    <%}%>
+		    <%if(list[i].isXsb=="true"){%>
+			   <i class="xs-icon"></i>
+		    <%}%>
+	    </div>
+	    
+		<div class="ub b-bottom" >
+			<div class=" ub umar-ar6  uinn-a7 uinn-a12 width70">
+                <span class="ellipse-1 fn-s-13 ub ub-pc ub-ac fn-c-blue mg-l-10"><%=list[i].flag%></span>
+				<span class=" ulev-18 c-gray  ub ub-pc ub-ac t-3 uinn-a1-center"><%=DMJS.CommonTools.renderStringLen(list[i].bidTitle,12)%></span>
+			</div>
+			<p class="fn-c-blue uinn-a12 fn-s-13"><%=isStatusType(list[i].status)%></p>
+		</div>
+		<div class="ub" >
+			<div class="width78">
+				<div class="  umar-ar6 uinn-a7 umar-top">
+					<div class=" ub ub-ver">
+						<div class=" ulev-app15 ub ">
+							
+							<span class="ub ub-f1 ub-ac  tx-c f-red  bd-r">
+		                            <ul>
+		                            	<li class="t-a ulev-app2">年化利率</li>
+		                            	<li class="ulev-app2 t-3"><span class="fn-c-blue ulev-app4"><%=(list[i].rate*100).toFixed(2)%></span><span class="fn-c-blue ulev-app2">%</span></li>
+			                            	<li class="text_dec lc_red">+<%=(list[i].jlRate*100).toFixed(2)%>%</li>
+									</ul>
+							</span>
+							<span class="ub  ub-ac ub-f1 tx-c c-black ub-pc bd-r">
+		                            <ul>
+		                            	<li class="t-a ulev-app2">投资期限</li>
+		                            	<li class="ulev-app2 t-3">
+		                            		<span class="fn-c-lightgray ulev-app4"><%=list[i].cycle%></span><span class="fn-s-11 fn-c-gray"><%=list[i].qxUnit%></span>
+		                            	</li>
+		                            </ul>
+	                        </span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="width20  umar-at05 tx-al-c umar-at2">
+				<div class="uinn-a1 ub ub-ver ">
+					<div class="box">
+						<div class="bg1"></div>
+					 <%if(list[i].progress <=50 ){%>
+						<div id="rount" class="rount-1" style="-webkit-transform:rotate(<%=3.6*list[i].progress%>deg)"></div>
+						<div class="bg2"></div>
+						
+						<div id="rount2" class="rount2-1" style="-webkit-transform:rotate(180deg)"></div>
+					<%}else{%>
+						<div id="rount" class="rount-1" style="-webkit-transform:rotate(180deg)"></div>
+						<div class="bg2"></div>
+	
+						<div id="rount2" class="rount2-1" style="display:block;-webkit-transform:rotate(<%=3.6*(list[i].progress-50)%>deg)"></div>
+					<%}%>
+					<%if(list[i].status==='TBZ'&&list[i].progress <100 ){%>
+						<div id="num" class="num">抢购</div>
+					<%}else{%>
+						<div id="num" class="num"><%=list[i].progress%>%</div>
+					<%}%>
+					</div>
+				</div>
+
+		</div>
+		</div>
+		<%if(list[i].status==='YFB'){%>
+			<div class="b-top ufclear uinn-align-center ulev-app14 uinn-al8" >倒计时：<span id='yfbTime'>225小时52分56秒</span></div>
+		<%}%>
+	</div>
+	<%}%>

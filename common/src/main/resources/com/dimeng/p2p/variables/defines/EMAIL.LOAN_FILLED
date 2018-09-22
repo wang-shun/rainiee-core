@@ -1,0 +1,5 @@
+尊敬的用户：
+       您好，您于${datetime}发布的借款“${title}”的筹款进度已经成功。您可以通过“我的${SYSTEM.SITE_NAME}”（个人中心）-“借款申请查询”查看相关信息。
+点击<a href='${lookUrl}' class='red'>这里</a>查看您的借款申请进度。
+感谢您对我们的关注和支持！
+[${SYSTEM.SITE_NAME}]

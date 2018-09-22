@@ -1,0 +1,2 @@
+@com.dimeng.framework.http.servlet.annotation.Module(id = "P2P_C_BASE_MALLOPTSETTINGS_SCORECLEANSET", name = "积分清零设置" ,parentId="P2P_C_BASE_MALLOPTSETTINGS" ,order = 2)
+package com.dimeng.p2p.console.servlets.base.malloptsettings.scorecleanset;

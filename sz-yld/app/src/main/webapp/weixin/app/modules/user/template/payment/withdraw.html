@@ -1,0 +1,95 @@
+<div id="withdraw" class="">
+  <div>
+	  <div class='bg-c-blue fn-c-white'>
+		<!-- <div class="fn-s-17  hei-20 ub uinn-a19">
+			<div class="hei-inherit line-h-40 img-icon8"></div>
+			<div class="line-h-20 ub-f1">可用金额(元)</div>
+		</div>	
+		<div class="fn-s-25 tx-al-c" id="overAmount"></div> -->
+		<div class="fn-s-17  hei-20 ub uinn-a19">
+			<div class="hei-inherit line-h-40 img-icon8"></div>
+			<div class="line-h-20 ub-f1">可提现金额(元)</div>
+		</div>	
+		<div class="fn-s-25  hei-60 line-h-60 tx-al-c" id="overAmount"></div>
+		
+      </div>
+    
+     <div class="ub-ver">
+            <div class="" id="turnRadio">
+            	<%for(var i=0;i<myBankList.length;i++){%>
+             <div class="ub ub-ac ub-f1 b-bottom pd-all-10">
+                <div class="ub ulev-app15 pd-r-10">
+                  <input type="radio" class="uhid " name="cardId"  id="" value="<%=myBankList[i].id%>" <%if(i==0){%>checked='true'<%}%>>
+                </div>
+                <div class="ub ulev-app15 ub-f1 width20"><%=myBankList[i].bankname%></div>
+                <div class="ub ub-f1 ub-pe ulev-app15 ub-ac" >尾号<%=(myBankList[i].bankNumber).substring(myBankList[i].bankNumber.length-4)%></div>
+              </div>
+              <%}%>
+            </div> 
+              <div class="ub ub-ac ub-f1 uinput b-bottom login">
+                <div class="umhw ulev-app15 width30">提现金额：</div>
+                <div class="ub-f1  ub t-gra ">
+                      <div class="ub  ub-f1">
+                            <input placeholder="当日充值金额 T+1日可提现" type="number" name="amount" id="amount" title="提现金额" validator="notEmpty;" maxlength="20" class="uc-a02 tx-l">
+                      </div>
+                      <div class="ub ulev-app15 ub-pe ub-ac umar-r" style="min-width: 1.2em;">元</div>
+                </div>
+              </div>
+              
+              <div class="ub ub-ac ub-f1 uinput b-bottom login">
+               <div class="umhw ulev-app15 width30">提现方式：</div>
+                <div class="ub-f1  ub t-gra ">
+                      <div class="ub  ub-f1">
+                            <input placeholder="请选择提现方式" id="withdrawWay" title="提现方式" validator="" maxlength="20" class="uc-a02 tx-l">
+                      </div>
+                      <select class="uhide" id="selectWithdrawType" name="withdrawWay" ></select>
+                </div>
+              </div>
+              
+              <%if(!DMJS.userInfo.tg){%>
+              <div class="ub ub-ac ub-f1 uinput b-bottom login">
+               <div class="umhw ulev-app15 width30">交易密码：</div>
+                <div class="ub-f1  ub t-gra ">
+                      <div class="ub  ub-f1">
+
+                            <input placeholder="请输交易密码" type="password" name="withdrawPsd" id="withdrawPsd" title="交易密码" validator="notEmpty;" maxlength="20" class="uc-a02 tx-l">
+
+                      </div>
+                      
+                </div>
+              </div>
+               <%}%>
+             
+     </div>
+     
+     <div class="ub umar-a2-extend1 ub-ac">
+		<div class="ub umar-r ulev-app14">提现手续费(元)：<span class=" t-red" id="txsxf">0.00</span><span class="t-9 ulev-app14" id="txts">(实际手续费以第三方为准)</span></div>
+	 </div>
+	 <div class="ub umar-a2-extend1 ub-ac">
+		<div class="ub umar-r ulev-app14">实际支付金额(元)：<span class="ub t-red" id="paySum">0.00</span></div>
+	 </div>
+<!--	 <div class="ub umar-a2-extend1 ub-ac">
+		<div class="ub umar-r ulev-app14">预计到账时间：
+		<span class=" t-red" id="tiem">
+		   <%=(function(){
+					    var   now=new Date();
+					    var   year=now.getFullYear();     
+                        var   month=now.getMonth()+1;     
+                        var   date=now.getDate();     
+                       month=(month<10)?("0"+month):month;
+                       date=(date<10)?("0"+date):date;
+                       return   year+"-"+month+"-"+date;
+					})()%>
+		</span>
+		<span class="t-9 ulev-app14">(1-2个工作日之内到账,节假日除外)</span></div>
+	 </div>-->
+     <div class="ub ub-ac ub-pc umar-a21 c-orange uc-a02" action="action:withdraw">
+         <div class="ub ub-ac ub-pc t-wh uinnh5 ulev-app4">提现</div>
+     </div>
+    <div class="pd-l-10  fn-s-15 line-h-30">温馨提示：</div>
+	    <div class="pd-bt-5 fn-s-12 ">
+			<div class="pd-l-20 pd-b-20 pd-r-10"><%=twxts%></div>
+		</div>
+  </div>
+  <!-- withdraw end -->
+</div>

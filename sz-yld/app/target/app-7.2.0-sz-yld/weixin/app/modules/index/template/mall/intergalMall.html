@@ -1,0 +1,120 @@
+<div class="c-e hei-inherit">
+	<div class="ub pd-all-8 bc-withe t-3" id="goodsCondition" style="font-size: 1.43rem;">
+		<div class="ub ub-ac ub-pc ub-f1 bd-r " listStatus="goodsType" data-val="商品类别">
+			<div class="ub">商品类别</div>
+			<div class="mall-down-ico"></div>
+		</div>
+		<div class="ub ub-ac ub-pc  ub-f1 bd-r" listStatus="integral" data-val="积分">
+			 <div>积分</div>
+			<div class="mall-down-ico"></div>
+		</div>
+		<%if(data.allowsBalance){%>
+		<div class="ub ub-ac ub-pc ub-f1 bd-r" listStatus="price" data-val="价格">
+			 <div>价格</div>
+			<div class="mall-down-ico"></div>
+		</div>
+		<%}%>
+		<div class="ub ub-ac ub-pc ub-f1" listStatus="sort" data-val="排序">
+			<div>排序</div>
+			<div class="mall-down-ico"></div>
+		</div>
+	</div>
+	
+	<div id ="borderb-gra" class="borderb-gra uhide" >
+		<div id="messgeH">
+       <!-- 商品类型 -->
+        <ul class="uhide ldm-type" data-flag="goodsType" action="action:choiceType">
+        	<li class='ub-ver ub-pc ulev-app14 ub-f1 borderb-gra02' conditionType='0' >
+        		不限
+        	</li>
+        	<%for(var i=0;i<data.mallTypeList.length;i++){%>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1' conditionType='<%=data.mallTypeList[i].id%>' >
+	        	<%=data.mallTypeList[i].name%>
+	        </li>
+	        <%}%>
+	     <!--<li class='ub-ver ulev-app15 ub-f1 closeUP' action="action:closeUP"></li>-->
+        </ul>
+		  <!-- 积分-->
+        <ul class="uhide ldm-type" data-flag="integral" action="action:choiceType">
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 choiceType borderb-gra02' conditionType='0'>
+				不限
+	        </li>
+	        <%for(var i=0;i<data.scoreRangeList.length;i++){%>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 choiceType' conditionType='<%=data.scoreRangeList[i].id%>'>
+	        	<%if(data.scoreRangeList[i].minScore == "0"){%>
+	        		<%=data.scoreRangeList[i].maxScore%>以下
+	        	<%}else{if(data.scoreRangeList[i].maxScore == "2147483647"){%>
+	        		<%=data.scoreRangeList[i].minScore%>以上
+        		<%}else{%>
+		        	<%=data.scoreRangeList[i].minScore%>-<%=data.scoreRangeList[i].maxScore%>
+	        	<%}}%>
+	        
+	        </li>
+	        <%}%>
+	     <!--<li class='ub-ver ulev-app15 ub-f1 closeUP' action="action:closeUP"></li>-->
+        </ul>
+          <!-- 价格 -->
+         <%if(data.allowsBalance){%>
+        <ul class="uhide ldm-type" data-flag="price" action="action:choiceType">
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 choiceType borderb-gra02' conditionType='0'>
+				不限
+	        </li>
+	        <%for(var i=0;i<data.amountRangeList.length;i++){%>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 choiceType' conditionType='<%=data.amountRangeList[i].id%>'>
+	        	<%if(data.amountRangeList[i].minScore == "0"){%>
+	        		<%=data.amountRangeList[i].maxScore%>以下
+	        	<%}else{if(data.amountRangeList[i].maxScore == "2147483647"){%>
+	        		<%=data.amountRangeList[i].minScore%>以上
+        		<%}else{%>
+		        	<%=data.amountRangeList[i].minScore%>-<%=data.amountRangeList[i].maxScore%>
+	        	<%}}%>
+	        </li>
+	        <%}%>
+	     <!--<li class='ub-ver ulev-app15 ub-f1 closeUP' action="action:closeUP"></li>-->
+        </ul>
+         <%}%>
+         <!-- 排序 -->
+        <ul class="uhide ldm-type" data-flag="sort" action="action:choiceType">
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 borderb-gra02' conditionType='sort_way_unlimited-'>
+	        	默认
+	        </li>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_newest-ASC'>
+	        	最新↑
+	        </li>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_newest-DESC'>
+	        	最新↓
+	        </li>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_hot-ASC'>
+	        	热门↑
+	        </li>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_hot-DESC'>
+	        	热门↓
+	        </li>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_score-ASC'>
+	        	积分↑
+	        </li>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_score-DESC'>
+	        	积分↓
+	        </li>
+	         <%if(data.allowsBalance){%>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_amount-ASC'>
+	        	价格↑
+	        </li>
+	        <li class='ub-ver ub-pc ulev-app14 ub-f1 ' conditionType='sort_way_amount-DESC'>
+	        	价格↓
+	        </li>
+	        <%}%>
+	     <!--<li class='ub-ver ulev-app15 ub-f1 closeUP' action="action:closeUP"></li>-->
+        </ul>
+         </div>
+		</div> 
+		<!-- -蒙版 -->
+		<div  id="slide-mask" class="uhide" style="position: absolute;z-index: 990;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.4);"></div>
+	
+	<div items="1" class=" ub-fh" id='item1'>
+			<div>
+				<div class="ListArea"  style='padding-top: 1rem;' >
+				</div>
+			</div>
+		</div>
+</div>

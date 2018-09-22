@@ -1,0 +1,40 @@
+<div class="bg-c-gray hei-inherit">
+		<div class="donation-tl ub">
+			<div class="hei-inherit img-user img-icon_8" ></div>
+	        <div class="line-h-30 ub-f1">转让金额(元)</div>
+		</div>
+		<div class="donation-ct">
+			<%=fmoney((salePrice*1).toFixed(2)*1)%><span class="fn-s-12">元</span>
+		</div>
+		<div class="donation-ft">
+			<font class="fn-c">账户余额：</font><span class="fn-c-org"><%=fmoney((overAmount*1).toFixed(2)*1)%></span><font class="fn-s-12">元</font>
+		</div>
+		<div class="donation-inp ub mg-t-1 b-bottom">
+			<div class="line-h-28 ">购买金额：</div>
+			<div class="line-h-28 "><span class="fn-c-org"><%=fmoney((salePrice*1).toFixed(2)*1)%></span><font class="fn-s-12">元</font></div>
+		</div>
+		<div class="donation-inp ub mg-t-1" >
+			<div class="line-h-28 ">预期收益：</div>
+			<div class="line-h-28 "><span class="fn-c-org" id="yqsy">0.00</span><font class="fn-s-12">元</font></div>
+		</div>
+		<div class="donation-inp ub b-bottom " >
+			<div class="line-h-28 ">交易密码：</div>
+			<div>
+				<input placeholder="请输入交易密码" name="tranPwd" title="交易密码" id="tranPwd" validator="notEmpty;" value="" type="password" maxlength="20" class="uc-a02">
+			</div>
+		</div>
+		<div class="ub umar-a2 ub-ac" id="agreementFlag">
+            <input type="checkbox"  class="uhide"  title="请阅读风险提示函和债权转让协议" validator="checked;" id="autid">
+            <div  class="ub t-bla ub-f1" style="width:7.5rem">
+                <div action="action:turnRememberRido" class="che-icon ub-img umhw2"></div>
+                <div class="ub-f1 ut-s tx-l t-gra ub ub-ac fn-s-11E" style=""  ><label for="autid">我已阅读并同意</label>
+                	<%if(isShowFXTS=='true'){%>
+                	<div id="fxtsh" class="ub">《<div class="lc_red"  action="action:agreement['FXTSH']">风险提示函</div>》</div>
+                	<%}%>
+                	<div id="zqxy" class="ub">《<div class="lc_red"  action="action:agreement['ZQ']">债权转让协议</div>》</div></div>
+            </div>
+    	</div>
+		<div class="ub ub-pc mg-t-20 fn-s-15" id='creditorBuy'> 
+			<div class="width98 tx-al-c pd-bt-10 radius bg-c-blue fn-c-white">马上支付</div>
+		</div>
+</div>

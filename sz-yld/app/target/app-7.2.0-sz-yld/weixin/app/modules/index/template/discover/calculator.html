@@ -1,0 +1,35 @@
+<div class="pd-defau ">
+	<div class="ub bc-withe pd-all-10 ub-b-border">
+		<div class=" fn-s-14 line-h-20">出借金额：</div>
+		<div class="person-inp ub-f1"><input validator="notEmpty;Int" title="出借金额" placeholder="输入金额为正整数"  name="amount"  maxlength="11" type="number"/></div>
+		<div class="fn-s-13">元</div>
+	</div>
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-b-border">
+		<div class=" fn-s-14 line-h-20">年利率：</div>
+		<div class="person-inp ub-f1"><input placeholder="请输入年利率" id="rate" title="年利率" name="rate" validator="notEmpty;val[1,24]" type="text" /></div>
+		<div class="fn-s-13">%</div>
+	</div>
+    <div class="tx-al-r line-h-30">
+		利率精确到小数点后两位，范围1.00%-24.00%之间
+	</div> 
+	
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-ac ub-pj ub-b-border">
+		<div class=" fn-s-14 line-h-20">还款方式：</div>
+		<div class="person-inp ub-f1"><input class="width100" id="repaymentWay"   title="还款方式" /></div>
+		<div class="img-select" style="margin-left: -1rem;"></div>
+		<select class="uhide" id="select-repaymentWay"  name="repaymentWay"></select>
+	</div>
+	
+	<div class="ub bc-withe pd-all-10 mg-t-5 ub-ac ub-pj ub-b-border">
+		<div class=" fn-s-14 line-h-20">借款期限：</div>
+		<div class="person-inp ub-f1"><input placeholder="请输入1~36" type="number" title="借款期限" class="width100 Jnum" validator="notEmpty;val[1,36]" name="loanTime"   id="loanTime"/></div>
+		<div class="fn-s-13" id="select-loanTime">月</div>
+		<!--<select class="uhide"  name="loanTime"  ></select>-->
+	</div>
+	
+	
+	
+	<div class="mg-t-20  bc-withe" action="action:submit">
+		<div class=" ub-f1 line-h-40 radius  b-c-blue fn-s-17 tx-al-c fn-c-white ">计算</div>
+	</div>
+</div>

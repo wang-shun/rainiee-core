@@ -1,0 +1,44 @@
+<div class="fn-c">
+	<div class="ub pd-all-10 fn-s-15 boder-tb mg-t-5">
+		<div class="pd-all-5 ">借款标题</div>
+		<div class="pd-all-5"><%=bidTitile%></div>
+	</div>
+	<div class="ub pd-all-10 fn-s-15 bd-t">
+		<div class="pd-all-5 ">投资金额</div>
+		<div class="pd-all-5 fn-c-org"><%=expAmount%>元</div>
+	</div>
+	<div class="ub pd-all-10 fn-s-15 bd-t">
+		<div class="pd-all-5 ">年化利率</div>
+		<div class="pd-all-5 fn-c-org"><%=rate*100%>%</div>
+	</div>
+	<%if(status=="YWT"){%>
+	<div class="ub pd-all-10 fn-s-15 bd-t">
+		<div class="pd-all-5 ">收益期</div>
+		<div class="pd-all-5 fn-c-org"><%=returnPeriod%></div>
+	</div>
+	<%}%>
+	<%if(status=="YTZ"){%>
+	<div class="ub pd-all-10 fn-s-15 bd-t">
+		<div class="pd-all-5 ">待赚金额</div>
+		<div class="pd-all-5 "><%=dueInAmount%>元</div>
+	</div>
+	<%}%>
+	<%if(status=="YJQ"||status=="YTZ"){%>
+	<div class="ub pd-all-10 fn-s-15 bd-t">
+		<div class="pd-all-5 ">已赚金额</div>
+		<div class="pd-all-5 "><%=receivedAmount%>元</div>
+	</div>
+	<%}%>
+	<%if(status=="YJQ"){%>
+	<div class="ub pd-all-10 fn-s-15 bd-t">
+		<div class="pd-all-5 ">结清日期</div>
+		<div class="pd-all-5 "><%=receivedDate%></div>
+	</div>
+	<%}%>
+	<%if(status=="YTZ"){%>
+	<div class="ub pd-all-10 fn-s-15 bd-t">
+		<div class="pd-all-5 ">下个还款日</div>
+		<div class="pd-all-5"><%=nextRepaymentDate%></div>
+	</div>
+	<%}%>
+</div>

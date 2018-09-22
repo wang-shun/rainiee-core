@@ -1,0 +1,95 @@
+<div class="bg-c-gray">
+	
+<div class="dt-title ub">
+	<div class="img-icon9"></div>
+	<div class="line-h-25 ub-f1"><%=loanName%></div>
+</div>
+
+<div class="dt-detail">
+	<div class="ub">
+		<div class="ub-f1 width60">公益机构:<%=organisers%></div>
+		<div class=" ub ub-pe ub-f1 width40">
+			<div class="img-jzjl"></div>
+			<div class="line-h-25 fn-c-yellow" action="index/index/donationLog/<%=bidId%>">捐助记录</div>
+		</div>
+		
+	</div>
+	<div class="ub mg-t-15">
+			<div class="ub-f1  process_T">
+			<div class="process_T_y" style="width:<%=progress%>%;"></div>
+			</div>
+	</div>
+		<div class=" mg-t-15">
+			<div class="ub">
+				<div class="width60 fn-c-white">金额:&nbsp;<%=loanAmount%>元</div>
+				<div class="width40">捐助人数:&nbsp;<%=totalNum%></div>
+			</div>
+			<div class="ub mg-t-10">
+				<div class="fn-c-white">
+					已筹:&nbsp;<span class="fn-c-yellow"><%=donationsAmount%></span>元
+				</div>
+				
+			</div>
+		</div>
+		
+</div>
+<div class="pd-all-10 fn-s-13 bc-withe">
+	<div class="ub">
+				<div class="width40 ">最低起捐:&nbsp;<span class="fn-c"><%=minAmount*1%></span>元</div>
+				<div class="width60 tx-al-r">筹款开始时间:&nbsp;<span class="fn-c"><%=loanStartTime%></span></div>
+	</div>
+	<div class="ub mg-t-5">
+				<div class="width40 ">可捐:&nbsp;<span class="fn-c-org"><%=remaindAmount%></span>元</div>
+				<div class="width60 tx-al-r">筹款截止时间:&nbsp;<span class="fn-c"><%=loanEndTime%></span></div>
+	</div>
+</div>
+<div class=" pd-all-10 bc-withe">
+	<div class="ub">
+		<div style="width:1rem; height:2rem;border-left:2px solid #34B8FC;"></div>
+		<div class="line-h-20 fn-s-15 fn-c">简介:</div>
+	</div>
+	<div class="fn-s-12 wordbreak-j tx-al-l mg-t-10" >
+		<%=introduction%>
+	</div>
+</div>
+<div class="mg-t-5 pd-all-10 bc-withe">
+	<div class="ub">
+		<div style="width:1rem; height:2rem;border-left:2px solid #34B8FC;"></div>
+		<div class="line-h-20 fn-s-15 fn-c">倡议书:</div>
+	</div>
+	<div class="fn-s-12 wordbreak-j tx-al-l mg-t-10 " >
+		<%=advocacyContent%>
+	</div>
+</div>
+   <%if(bidProgres){%>
+	
+		<div class="mg-t-5 pd-all-10 bc-withe">
+			<div>
+				<div class="ub">
+					<div style="width:1rem; height:2rem;border-left:2px solid #34B8FC;"></div>
+				<div class="line-h-20 fn-s-15 fn-c">进展:</div>
+				</div>
+			<!--<div class="fn-s-15 fn-c">进展</div>-->
+			
+			<div class="dt-jz-t">
+				<%for(var i = 0; i < bidProgres.length; i++){%>
+				<div class="mg-t-10">
+					<div class="ub">
+						<div class="dt-jz-r"></div>
+						<div class="mg-l-10 fn-s-13 fn-c"> <%=bidProgres[i].titleTime%></div>
+					</div>
+					<div class="mg-t-10 fn-s-12">
+				       <%=bidProgres[i].introduction%>
+				      <%if(bidProgres[i].moreUrl){%>
+				       <p ><a target="_blank" style="color:blue;" href="<%=bidProgres[i].moreUrl%>">查看更多</a></p>
+					   <%}%>
+					</div>
+				</div>
+				<%}%>
+			</div>
+			
+			</div>
+		</div>
+	
+	<%}%>
+</div>

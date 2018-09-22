@@ -1,0 +1,65 @@
+<div class="ub ub-ver">
+	<div class="ub ub-f1 ub-ver">
+		<div class="goodsPtr" class="mall-good" style="<%=scoreMall.image?'background-image: url('+scoreMall.image+')':''%>"></div>
+		
+		<div class="bdr-tb pd-all-8 ub-ver">
+			<!--商品信息-->
+			<div class="ub bd-t ub-ver">
+				<div class="ub fn-s-14 t-3 fn-s-16"><%=scoreMall.name%></div>
+				<div class="fn-s-15 " style="margin: .5rem 0">
+				<%if(allowsBalance && scoreMall.isCanScore=='yes'&&scoreMall.isCanMoney=='yes'){%>
+					<div class="ub ub-ac ub-f1 ">
+						<span class="fn-c-org f-red">¥<%=DMJS.CommonTools.formatMoneyNumber(scoreMall.amount)%></span>
+						<%if(scoreMall.marketPrice){%>
+							<span style="text-decoration: line-through;">市场价:<%=DMJS.CommonTools.formatMoneyNumber(scoreMall.marketPrice)%></span><br/>
+						<%}%>
+						
+						<span class="fn-c-org"><%=scoreMall.score%>积分可兑换</span>
+					</div>
+				<%}else{%> 
+					<div class="ub ub-ae ub-f1 ">
+					<%if(scoreMall.isCanMoney=='no'&&scoreMall.isCanScore=='yes'){%>
+						<%if(scoreMall.marketPrice){%>
+							<span style="text-decoration: line-through;">市场价:<%=DMJS.CommonTools.formatMoneyNumber(scoreMall.marketPrice)%></span><br/>
+						<%}%>
+						<span class="fn-c-org"><%=scoreMall.score%>积分可兑换</span>
+					<%}else if(!allowsBalance){%>
+						<%if(scoreMall.marketPrice){%>
+							<span style="text-decoration: line-through;">市场价:<%=DMJS.CommonTools.formatMoneyNumber(scoreMall.marketPrice)%></span><br/>
+						<%}%>
+						<span class="fn-c-org"><%=scoreMall.score%>积分可兑换</span>
+					<%}%>
+					  </div>
+				<%}%>
+				<div class="ub-f1">
+				    <%if(allowsBalance && scoreMall.isCanMoney=='yes' && scoreMall.isCanScore=='no'){%>
+						 <span class="fn-c-org f-red">¥<%=DMJS.CommonTools.formatMoneyNumber(scoreMall.amount)%></span>
+					<%if(scoreMall.marketPrice){%>
+						 <span style="text-decoration: line-through;">市场价:<%=DMJS.CommonTools.formatMoneyNumber(scoreMall.marketPrice)%></span>
+		        	<%}%>
+		         <%}%>
+					</div>
+				</div>
+				<div class="t-a fn-s-13">所属类别：<%=scoreMall.type%></div>
+				<div class="ub t-a fn-s-13 umar-a5-0">
+					<div class="ub ub-f1">成交笔数：<%=scoreMall.dealNum%>笔</div>
+					<div class="ub ub-pc ub-f1">库存量：<%=scoreMall.stock%>件</div>
+					<div class="ub ub-pe ub-f1">限购数量：<%=scoreMall.purchase > 0?scoreMall.purchase+"件":"不限购"%></div>
+				</div>
+			</div>
+			<!--购买记录-->
+			<div class="ub fn-s-14 ub-ac ub-pc mg-t-8" id="purchaseHistory">
+				<div class="ub ub-f1 t-6">购买记录</div>
+				<div class="img-more"></div>
+			</div>
+		</div>
+	    <!--商品详情-->
+	    <div>
+	    	<div class="ub ub-ac ub-pc hei-40 fn-s-15" >商品详情</div>
+	    	<div class="pd-all-10 fn-s-14" id="showDetail">
+	    		
+	    	</div>
+	    </div>
+	</div>
+</div>
+

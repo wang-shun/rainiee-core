@@ -1,0 +1,21 @@
+<div class="">
+	<div class="pd-all-10 bd-t">
+		<div class="fn-s-15 mg-t-10 fn-c"><%=title%></div>
+		<div class="fn-s-12 ub mg-t-10">
+			<div class="width70">
+				<%if(tabType!=='WZGG'){%>
+			<div class="width70 tx-al-l"><%= from ? "来源："+from : "来源：无"%></div>
+		<%}%>	
+			</div>
+			<div class="width30 tx-al-r"><%=releaseTime%></div>
+		</div>
+	</div>
+	<div class="pd-all-10 wordbreak-j">
+		<%=content%>
+	</div>
+	<!--<div class="fn-s-12 ub mg-t-20">
+		<%if(tabType!=='WZGG'){%>
+			<div class="width70 tx-al-r"><%= from.length>0||from=="" ? "来源："+from : ""%></div>
+		<%}%>	
+		</div></-->
+</div>

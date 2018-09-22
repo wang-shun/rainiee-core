@@ -1,0 +1,225 @@
+	<div id='myInvestment'>
+	
+		<ul class="ub  ulev-app15 c-wh tx-c bd-t bd-t-shadow JSAppointDropDown" id='indexTitleContent'>
+			<li class="ub-f1 pd-bt-10 lbd-b-blue" listType='0'>标的信息</li>
+		<%if(repayList&&repayList.repayList.length>0){%> <li class="ub-f1 pd-bt-10"  listType='1'>还款计划</li><%}%>
+			<li class="ub-f1 pd-bt-10" listType='<%=(repayList&&repayList.repayList.length>0)?2:1%>'>投资记录</li>
+		</ul>
+		<div id="contentWrapper" class="uof">
+			<div id="slider" class="ub-fh ub">
+		
+				<div items="0" class="c-e ub-fh JSAppointDropDownList" >
+					<div class="c-e ub-fh">
+		
+						<div class="ListArea ">
+							<%if(biditem){%>
+							<div >
+								<%if(biditem.regYear){%>
+								<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  line-h-25 luinn-a63 bg-b-gray">
+									企业信息
+								</div>
+								<div class=" c-wh   lunin-a3  ulev-app2 uinn-a1 line-h-25">
+									<p>注册年限：
+										<%=biditem.regYear%>
+									</p>
+									<p>注册资金：
+										<%=fmoney((biditem.regAmount*1).toFixed(2)*1)%>万元</p>
+									<p>资产净值：
+										<%=fmoney((biditem.earnAmount*1).toFixed(2)*1)%>万元
+									</p>
+									<p>上年度经营现金流入：
+										<%=fmoney((biditem.cash*1).toFixed(2)*1)%>万元
+									</p>
+									<p>行业：
+										<%=biditem.business%></p>
+									<p>经营情况：
+										<%=biditem.operation%>
+									</p>
+									<p>涉诉情况：
+										<%=biditem.complaints%>
+									</p>
+									<p>征信记录：
+										<%=biditem.credit%>
+									</p>
+									
+								</div>
+								<%}%>
+								<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  line-h-25 luinn-a63 bg-b-gray">
+									项目信息
+								</div>
+								<div class=" c-wh   lunin-a3  ulev-app2 uinn-a1 line-h-25">
+									<p>融资方：
+										<%=biditem.qyName%>
+									</p>
+									<p>信用等级：
+										<span class="fn-c-org"><%=biditem.xyLevel%></span>
+									</p>
+									<p>本期投资金额：
+										<%=fmoney((biditem.amount*1).toFixed(2)*1)%>元</p>
+									<p>项目区域：
+										<%=biditem.area%>
+									</p>
+									<%if(!!biditem.repayDate){%>
+										<p>还款日期：
+											<%=biditem.repayDate%>
+										</p>
+									<%}%>
+									<p>年化利率：
+										<%=((biditem.rate)*100).toFixed(2)%>%</p>
+									<p>投资截止日期：
+										<%=biditem.endDate%>
+									</p>
+									
+								</div>
+								<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  line-h-25 luinn-a63 bg-b-gray">
+									借款描述
+								</div>
+								<div class=" c-wh   lunin-a3  ulev-app2 uinn-a1 line-h-25 b-bottom lus-b">
+									<p class="lwordbreak">
+										<%=biditem.desc%>
+									</p>
+						
+								</div>
+								<%if(!!biditem.dbjg){%>
+								<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  line-h-25 luinn-a63 bg-b-gray">
+									风控信息
+								</div>
+								<div class=" c-wh   lunin-a3  ulev-app2 uinn-a1 line-h-25">
+									<p>担保机构：
+										<%=biditem.dbjg%>
+									</p>
+									<p>担保机构介绍：
+										<%=biditem.dbdesc%></p>
+									<p>担保情况：
+										<%=biditem.fkcs%>
+									</p>
+									
+						
+								</div>
+								<%}%>
+								<%if(biditem.dys&&(biditem.dys).length>0){%>
+									<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  line-h-25 luinn-a63 bg-b-gray">
+										抵押物信息
+									</div>
+									<div class=" c-wh   lunin-a3  ulev-app2 uinn-a1 line-h-25">
+										<p>
+											<%=biditem.dys[0].dyName%>
+										</p>
+										
+									</div>
+								<%}%>
+							</div>
+							<%}%>
+								
+								<%if(repayList&&repayList.isXmdt&&repayList.dynamicInfos.length>0){%>
+						
+								<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  line-h-25 luinn-a63 bg-b-gray">
+									项目动态
+								</div>
+								
+								<div>
+									<%for(var i=0;i<repayList.dynamicInfos.length;i++){%>
+											<div class=" pd-bt-5 c-wh b-top-bottom lus-b pd-lr-5">
+												<div class="ub ub-pj pd-bt-3 fn-c-hardgray">
+													<div><%=repayList.dynamicInfos[i].title%></div><div><%=repayList.dynamicInfos[i].titleDate%></div>
+												</div>
+												<div class="ub width100  wordbreak-j pd-bt-3"> <%=repayList.dynamicInfos[i].about%><%="       "%><%=repayList.dynamicInfos[i].more%> </div>
+											</div>
+											
+									<%}%>
+								</div>
+								<%}%>
+
+						</div>
+					</div>
+		
+				</div>
+			<%if(repayList&&repayList.repayList.length>0){%>
+				<div items="1" class="c-e ub-fh JSAppointDropDownList">
+					<div class=' ub-fh'>
+						<div class="ListArea" >
+							<%if(repayList&&repayList.repayList.length>0){%>
+								<div>
+									
+									<div class="ub ltable bg-b-gray ulev-app13" id="titelMenu">
+										<div class="ub width25 ub-ac ub-pc ">合约还款日</div>
+										<div class="ub width25 ub-ac ub-pc ">状态</div>
+										<div class="ub width25 ub-ac ub-pc ">科目/金额</div>
+										<div class="ub width25 ub-ac ub-pc ">实际还款日</div>
+									</div>
+									<%for(var i=0;i<repayList.repayList.length;i++){%>
+										<div class="ub ltable c-wh b-bottom lus-b">
+											<div class="ub width25 ub-ac ub-pc"><%=repayList.repayList[i].repayDate%></div>
+											<div class="ub width25 ub-ac ub-pc"><%=repayList.repayList[i].status%></div>
+											<div class="ub width25 ub-ac tx-c"><%=repayList.repayList[i].repayType%>/<%=repayList.repayList[i].amount%>元</div>
+											<div class=" width25 ub-ac tx-c">
+												<%if(!repayList.repayList[i].realDate){%>
+													--
+												<%}else{%>
+													<%=repayList.repayList[i].realDate%>
+												<%}%>
+											</div>
+										</div>
+									<%}%>
+							</div>
+
+							<%}else{%>
+							  <div class="ub pd-all-8 fn-s-15 ub-pc">暂无数据</div>
+
+							<%}%>
+								
+							<%if(repayList&&repayList.isXmdt&&repayList.dynamicInfos.length>0){%>
+						
+								<div class=" c-wh ulev-app13  b-top-bottom ulev-app14  line-h-25 luinn-a63 bg-b-gray">
+									项目动态
+								</div>
+								<div>
+									<%for(var i=0;i<repayList.dynamicInfos.length;i++){%>
+											<div class=" pd-bt-5 c-wh b-top-bottom lus-b pd-lr-5">
+												<div class="ub ub-pj pd-bt-3 fn-c-hardgray">
+													<div><%=repayList.dynamicInfos[i].title%></div><div><%=repayList.dynamicInfos[i].titleDate%></div>
+												</div>
+												<div class="ub width100  wordbreak-j pd-bt-3"> <%=repayList.dynamicInfos[i].about%><%="       "%><%=repayList.dynamicInfos[i].more%> </div>
+											</div>
+											
+									<%}%>
+								</div>
+								<%}%>
+						</div>
+					</div>
+				</div>
+				<%}%>
+				<div items="<%=(repayList&&repayList.repayList.length>0)?2:1%>" class="c-e ub-fh JSAppointDropDownList">
+					<div class=' ub-fh'>
+						<div class="ListArea">
+							<%if(!!bidrecordslist){%>
+								<div>
+									<div class=" c-wh   lunin-a3  ulev-app2 uinn-a1 ">
+										<p class="ulev-app13">加入人次<span class="fn-c-org "><%=list.peopleNum%></span>人，投标总额<span class="fn-c-org "><%=fmoney(list.alrAmount)%></span>元</p>
+									</div>
+								
+								
+									<div class="ub ltable bg-b-gray ulev-app13" id="titelMenu">
+										<div class="ub width33 ub-ac ub-pc ">投资人</div>
+										<div class="ub width33 ub-ac ub-pc ">投资金额</div>
+										<div class="ub width33 ub-ac ub-pc ">投资时间</div>
+									</div>
+									<%for(var i=0;i<bidrecordslist.length;i++){%>
+										<div class="ub pd-bt-5 c-wh b-top-bottom lus-b">
+											<div class="ub width33 ub-ac ub-pc"><%=bidrecordslist[i].accountName%></div>
+											<div class="ub width33 ub-ac ub-pc"><%=bidrecordslist[i].bidAmount%>元</div>
+											<div class="ub width33 ub-ac tx-c"><%=bidrecordslist[i].bidTime%></div>
+										</div>
+									<%}%>
+								</div>
+							<%}else{%>
+								 <div class="ub pd-all-8 fn-s-15 ub-pc">暂无数据</div>
+							<%}%>	
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>

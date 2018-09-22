@@ -1,0 +1,186 @@
+<%if(typeS==='hkz'){%>
+<%for(var i=0;i<list.length;i++){%>
+<div class=" c-wh   b-top-bottom umar-ab1 lus-b Jdc umar-at" creditorId="<%=list[i].zqId%>" bidid="<%=list[i].bidId%>" sourceZqPrice="<%=list[i].sourceZqPrice%>" transferRate="<%=(list[i].transferRate)*100%>"
+	ycfxsyqs="<%=list[i].ycfxsyqs%>" hkfs="<%=list[i].hkfs%>" nhl="<%=list[i].nhl%>" zqzrRateMin="<%=list[i].zqzrRateMin%>" zqzrRateMax="<%=list[i].zqzrRateMax%>">
+
+	<div class="ufclear">
+		<div class="width87 ufl  uinn-ab1 pos-relative uinn-6 JSDetail">
+			<div class=" ub umar-ar6  uinn-a7 umar-at">
+				<!--<span class="t-oran ub ub-pc ub-ac ulev-app2 lb-border0 btn_wh22" >
+		                      
+		                          </span>-->
+				<span class=" ulev-18 c-gray  ub ub-pc ub-ac t-3 uinn-a1-center"><%=DMJS.CommonTools.renderStringLen(list[i].bidName,12)%></span>
+			</div>
+
+			<div class="  umar-ar6 uinn-a7 umar-top">
+				<div class=" ub ub-ver">
+					<div class=" ulev-app15 ub ">
+
+						<span class="ub ub-f1 ub-ac  tx-c f-red ">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3">
+			                            		<span class="fn-c-org ulev-app4"><%=(list[i].nhl).toFixed(2)%></span>
+			                            		<span class="ulev-app2">%</span>
+			                            	</li>
+											<li class="t-a ulev-app2">年化利率</li>
+						<%if(list[i].jxl>0){%>
+						<li class="text_dec lc_red fn-s-11" style="top:-0.8rem">+<%=list[i].jxl.toFixed(2)%>%</li>
+						<%}%>
+						</ul>
+						</span>
+						<span class="ub  ub-ac ub-f1 tx-c c-black ub-pc">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=list[i].gmjg%></span><span class="ulev-app2">元</span></li>
+						<li class="t-a ulev-app2">投资金额</li>
+
+						</ul>
+						</span>
+						<span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+			                            <ul>
+			                                <li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=gaibAmount(list[i].dsbx,'元',2)%></span></li>
+						<li class="t-a ulev-app2">待收本息</li>
+						</ul>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class=" ub umar-ar6  uinn-a7 umar-at t-3">
+				<span class="ulev-app2">期数：<%=list[i].syqs%>/<%=list[i].hkqs%></span><span class="ulev-app2 mar-aL12">下个还款日期：<%=list[i].xghkr%></span>
+			</div>
+			<div class="lright-more"></div>
+		</div>
+
+	</div>
+	<ul class="b-top ufclear ub  ulev-app13 uinn-al8 fn-c-blue uinn-a23">
+		<%if(list[i].zqzrOrderId <= 0){%>
+			<li class="ub-f1 "><span class="JviewContract JK">查看合同</span></li>
+		<%}else{%>
+			<li class="ub-f1 "></li>
+		<%}%>
+		<li>
+			<%=list[i].isTransfered=="S" ? '<span style="color : #666">回收中</span>' : "<span class='Jzr' xghkr='"+list[i].xghkr+"'>转让</span>" %></li>
+
+	</ul>
+</div>
+<%}%>
+<%}%>
+<!--
+	作者：2388177003@qq.com
+	时间：2016-01-18
+	描述：回款中end
+-->
+<%if(typeS==='tbz'){%>
+<%for(var i=0;i<list.length;i++){%>
+<div class=" c-wh   b-top-bottom umar-ab1 lus-b  umar-at Jdc JSDetail" bidid="<%=list[i].bidId%>">
+
+	<div class="ub">
+		<div class="width76   uinn-ab1 pos-relative uinn-6 ">
+			<div class=" ub umar-ar6  uinn-a7 umar-at">
+				<!--<span class="t-oran ub ub-pc ub-ac ulev-app2 lb-border0 btn_wh22" >
+		                      
+		                          </span>-->
+				<span class=" ulev-18 c-gray  ub ub-pc ub-ac t-3 uinn-a1-center"><%=DMJS.CommonTools.renderStringLen(list[i].bidName,12)%></span>
+			</div>
+
+			<div class="  umar-ar6 uinn-a7 umar-top">
+				<div class=" ub ub-ver">
+					<div class=" ulev-app15 ub ">
+
+						<span class="ub ub-f1 ub-ac  tx-c f-red ">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=(list[i].nhl).toFixed(2)%></span><span class="ulev-app2">%</span></li>
+						<li class="t-a ulev-app2">年化利率</li>
+						<%if(list[i].jxl>0){%>
+						<li class="text_decr2 lc_red">+<%=list[i].jxl.toFixed(2)%>%</li>
+						<%}%>
+						</ul>
+						</span>
+						<span class="ub  ub-ac ub-f1 tx-c c-black ub-pc">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=list[i].jkzq%></span><span class="ulev-app2"><%=list[i].isDay==false? "个月 ": "天"%></span></li>
+						<li class="t-a ulev-app2">投资期限</li>
+
+						</ul>
+						</span>
+						<span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+			                            <ul>
+			                                <li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=gaibAmount(list[i].gmjg,'元',2)%></span></li>
+						<li class="t-a ulev-app2">投资金额</li>
+						</ul>
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="width20  mg-t-15 tx-al-c ">
+
+			<div class="uinn-a1 ub ub-ver ">
+				<div class="box">
+					<div class="bg1"></div>
+					<%if(list[i].process <=50 ){%>
+					<div id="rount" class="rount" style="-webkit-transform:rotate(<%=3.6*list[i].process%>deg)"></div>
+					<div class="bg2"></div>
+
+					<div id="rount2" class="rount2" style="-webkit-transform:rotate(180deg)"></div>
+					<%}else{%>
+					<div id="rount" class="rount" style="-webkit-transform:rotate(180deg)"></div>
+					<div class="bg2"></div>
+
+					<div id="rount2" class="rount2" style="display:block;-webkit-transform:rotate(<%=3.6*(list[i].process-50)%>deg)"></div>
+					<%}%>
+					<%if(list[i].status==='TBZ'&&list[i].process <100 ){%>
+					<div id="num" class="num">抢购</div>
+					<%}else{%>
+					<div id="num" class="num">
+						<%=(list[i].process*1).toFixed(0)%>%</div>
+					<%}%>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<%}%>
+<%}%>
+<!--
+	作者：2388177003@qq.com
+	时间：2016-01-18
+	描述：投标中end
+-->
+
+<%if(typeS==='yjq'){%>
+<%for(var i=0;i<list.length;i++){%>
+<div class="ub b-top-bottom umar-at05 ulev-app14 Jdc " bidid="<%=list[i].bidId%>" zqid="<%=list[i].zqId%>" blzqzrid="<%=list[i].blzqzrId%>">
+	<div class="ub-f1 tx-c lmg-t-9b line-h-20">
+
+		<p>结清日期</p>
+		<p class="fn-c-org">
+			<%=list[i].jqsj%>
+		</p>
+		<%if(parseInt(list[i].zqzrOrderId) == 0){%>
+		<p class="fn-c-blue umar-at2 "><span class="JviewContract JK">借款合同</span></p>
+		<%}%>
+		<%if(parseInt(list[i].blzqzrId) > 0){%>
+		<p class="fn-c-blue umar-at2 "><span class="JviewContract ZR">转让合同</span></p>
+		<%}%>
+	</div>
+	<div class="ub-f2 bc-withe luinnh08 line-h-20 lub-b-leftv pos-relative uinn-al10">
+		<p>投资金额：<span class="fn-c-blue"><%=(list[i].gmjg).toFixed(2)%>元</span></p>
+		<p>年化利率：<span class="fn-c-blue"><%=(list[i].nhl).toFixed(2)%>%</span><span class="fn-c-blue"><%=list[i].jxl > 0 ? '+'+(list[i].jxl).toFixed(2)+'%':""%></span></p>
+		<p>结清方式：<span class="fn-c-blue"><%=(list[i].status)%></span></p>
+		<p>已赚金额：<span class="fn-c-blue"><%=(list[i].yzje).toFixed(2)%>元</span></p>
+		<p>债权ID：<span class="fn-c-blue"><%=(list[i].creditorId)%></span></p>
+		<p class="myFenIcon"></p>
+	</div>
+
+</div>
+<%}%>
+<%}%>
+<!--
+	作者：2388177003@qq.com
+	时间：2016-01-18
+	描述：已结清end
+-->

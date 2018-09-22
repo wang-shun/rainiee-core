@@ -1,0 +1,22 @@
+	<%for(var i=0;i<data.length;i++){%>
+	<div class="bc-withe mg-t-10 b-top-bottom">
+	<div class="pd-all-10 ub">
+		<div class="radius tk-ask fn-s-13 ub ub-ac ub-pc">问</div>
+		<div class="ub-f1 mg-l-5 wordbreak-j  ">
+			<div class="fn-s-14 fn-c-hardgray">我的反馈：<%=data[i].feedContent%> </div>
+			<div class="tx-al-r fn-s-13"><%=data[i].createTime%></div>
+		</div>
+		
+	</div>
+	<div class="pd-all-10 ub b-top">
+		<%if(data[i].isBack=='yes'){%>
+		<div class="radius tk-ans fn-s-13 ub ub-ac ub-pc">答</div>
+		<div class="ub-f1 mg-l-5 wordbreak-j">
+			<div class="fn-s-14 fn-c-hardgray">平台回复：<%=data[i].backContent%></div>
+			
+		</div>
+		<%}%>
+		
+	</div>
+	</div>
+	<%}%>

@@ -1,0 +1,174 @@
+
+<div id="basicInfo"> 
+	<div class="uinn-a22 ub uc-a02 bg-c-gray">
+	     <div class="uinn-a11 ub uinn-ar2  ulev-app14 t-6">安全等级</div>
+	     <div class=" ulev-app14 process_aq  ub ub-f1 t-oran umar-atb">
+               <div class="process_aq_z ub" style="width: <%=safeLevel%>%;"></div>
+          </div>
+          <div class="uinn-a11 ub uinn-ar2  ulev-app14 t-6" style="margin-left: .5rem;"><%=safeLevelTxt%></div>
+	</div> 
+	<div class="uinn-a22 b-bottom b-top c-wh">
+		<div class="ub  ">
+			<div class="uinn-a11 ub uinn-ar2  ulev-app14 t-6">实名认证</div>
+<!-- 			<div class="uinn-a11  ulev-app14 t-3 t-oran ">未设置</div>
+ -->			
+			<!-- <div class=" uinn-a11 ulev-app14  ub ub-pe ub-f1 t-red">123345455</div> -->
+		
+			<div class=" uinn-a11 ulev-app14  ub-f1 t-oran " >
+				<%if(!!idcardVerified||!!realName){%>
+					<div class="ub">
+						<div class="ub-f1"><%=realName%></div>
+						<div class="ub-f1 mg-l-10"><%=idCard%></div>
+					</div>
+				<%}else{%>
+				<div class="ub ub-pe " action="action:switchDiv['userinfoForm','showDiv']">设置</div>
+				<%}%>
+			</div>
+			
+
+		</div>
+		<div id="userinfoForm" class="showDiv" style="display: none;">
+			<div class="umar-a1 ub-border">
+				<div class="ub ub-ac uinput"> 
+					<div class="ub-f1  uinn uinn-al1">
+						<input name="name" placeholder="请输入真实姓名" tips="请输入2-10个汉字" nextfocus="idCard"
+							title="真实姓名" id="name"
+							validator="notEmpty;length[2,10];reg[/^[\u4e00-\u9fa5]{2,}$/]"
+							type="text" maxlength="10" class="uc-a02">
+					</div>
+				</div>
+			</div>
+			<div class="umar-a1 ub-border">
+				<div class="ub ub-ac uinput"> 
+					<div class="ub-f1  uinn uinn-al1">
+						<input name="idCard" placeholder="请输入身份证号" title="身份证号"
+							id="idCard"
+							validator="notEmpty;length[15,18];reg[/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}(\d|x|X)$/];checkidcard;"
+							type="text" maxlength="18" class="uc-a02">
+					</div>
+				</div>
+			</div> 
+			<div class="ub ub-ac ub-pc umar-a1 c-orange uc-a02" id="setUserInfo">
+				<div class=" ub ub-ac ub-pc uinnh5 t-wh c-orange  ulev-app4">提 交</div>
+			</div>
+		</div>
+	</div>
+	<div class="uinn-a22 b-bottom c-wh">
+		<div class="ub  ub-ac">
+			<div class="uinn-a11 ub uinn-ar2  ulev-app14 t-6">绑定邮箱</div>
+			<div class=" uinn-a11 ulev-app14  ub-f1 t-oran " >
+				<%if(!!emailVerified){%>
+					<div class="ub">
+						<div class="ub-f1"><%=email%></div>
+					</div>
+				<%}else{%>
+				<div class="ub ub-pe " action="action:switchDiv['emailForm','showDiv']">设置</div>
+				<%}%>
+			</div>
+<!-- 		<div class=" ulev-app14  ub ub-pe ub-f1 "><div action="" class="c-orange uinnh55 t-wh ub-border" style='padding:0.4em 1em' >修改</div></div> -->
+		
+		</div>
+		<div id="emailForm" class="showDiv" style="display: none;">
+			<div class="umar-a1 ub-border" id='emaildiv'>
+				<div class="ub ub-ac uinput">
+					<div class="ub-f1  uinn uinn-al1">
+						<input name="email" placeholder="请输入邮箱" nextfocus="codeVerity"
+							title="邮箱号" id="email"
+							validator="notEmpty;length[6,50];reg[/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/]"
+							type="text" maxlength="50" class="uc-a02">
+					</div>
+				</div>
+			</div>
+		
+			<!--<div class="umar-a1 ub-border"> 
+            <div class="ub ub-ac  uinput">
+                <div class="ub-f1 uinn t-gray">
+                    <input placeholder="请输入验证码" name="codeVerity" title="验证码" validator="reg[/^[0-9]{6}$/]" type="number" maxlength="6" class="uc-a02" ></input>
+                </div>
+                <div   id="emailGetCode" action="">
+                    <div class="ub ub-ac ub-pc c-orange ulev-app14 ub-border t-wh uinnh55" >获取验证码</div>
+                </div>
+            </div>
+       		</div> -->
+			<div class="ub ub-ac ub-pc umar-a1 c-orange uc-a02" id="setEmail">
+				<div class=" ub ub-ac ub-pc uinnh5 t-wh c-orange  ulev-app4">发送验证邮件</div>
+			</div>
+		</div>
+	</div>
+	<div class="uinn-a22 b-bottom c-wh">
+		<div class="ub  ub-ac">
+			<div class="uinn-a11 ub uinn-ar2  ulev-app14 t-6">绑定手机</div>
+			<div class=" uinn-a11 ulev-app14  ub-f1 t-oran " >
+				<%if(!!mobileVerified){%>
+					<div class="ub">
+						<div class="ub-f1"><%=phone%></div>
+					</div>
+				<%}else{%>
+				<div class="ub ub-pe " action="action:switchDiv['phoneForm','showDiv']">设置</div>
+				<%}%>
+			</div>
+	<!-- 		<div class=" ulev-app14  ub ub-pe ub-f1 "><div action="" class="c-orange uinnh55 t-wh ub-border" style='padding:0.4em 1em'>修改</div></div> -->
+			
+		</div>
+		<div id="phoneForm" class="showDiv" style="display: none;">
+			<div class="umar-a1 ub-border" id='phonediv'>
+				<div class="ub ub-ac uinput"> 
+					<div class="ub-f1  uinn uinn-al1">
+						<input name="phone" placeholder="请输入手机号码" title="手机号码" id="phone" validator="notEmpty;length[6,11];reg[/^[1][3|4|5|7|8][0-9]{9}$/]"	 type="tel" maxlength="11"  class="uc-a02">
+
+					</div>
+				</div>
+			</div>
+			 
+			<div class="umar-a1 ub-border">
+				<div class="ub ub-ac  uinput"> 
+					<div class="ub-f1 uinn t-gray uinn-al1">
+						<input  name="verifyCode" placeholder="请输入验证码" title="验证码" id="verifyCode" validator="reg[/^[0-9]{4}$/]" type="text" maxlength="4" class="uc-a02">
+					</div>
+					 
+					<div class="" id="getMcode" >
+					<div class="c-orange fn-s-13 ub-border t-wh pd-all-8" id="yzm" data-info='' action="action:getMobileCode">获取验证码</div>
+					<div class="fn-s-13 ub-border fn-c-white pd-all-8 hide" id="yzm_info"  style="color: #D3D3D3;"><span id="yzm_count">60</span>秒重新发送</div>
+						<!-- <div class="ub ub-ac ub-pc c-orange ulev-app14 ub-border t-wh uinnh55" >获取验证码</div>-->
+					</div> 
+				</div>
+			</div>
+			
+			<div class="ub ub-ac ub-pc umar-a1 c-orange uc-a02" id="phoneSave">
+				<div class=" ub ub-ac ub-pc uinnh5 t-wh c-orange  ulev-app4">提 交</div>
+			</div>
+		</div>
+	</div>
+	<div class="uinn-a22 b-bottom c-wh">
+		<div class="ub  ub-ac">
+			<div class="uinn-a11 ub uinn-ar2  ulev-app14 t-6">交易密码</div>
+			<div class=" uinn-a11 ulev-app14  ub-f1 t-oran " >
+				<%if(!!withdrawPsw){%>
+					<div class="ub">
+						<div class="ub-f1">已设置</div>
+					</div>
+				<%}else{%>
+				<div class="ub ub-pe " action="action:switchDiv['passwdForm','showDiv']">设置</div>
+				<%}%>
+			</div>
+		<!-- 	<div class=" ulev-app14  ub ub-pe ub-f1 "><div action="" class="c-orange uinnh55 t-wh ub-border" style='padding:0.4em 1em' >修改</div></div> -->
+		</div>
+		<div id="passwdForm" class="showDiv" style="display: none;">
+			<div class="umar-a1 ub-border" >
+				<div class="ub ub-ac uinput">
+					<div class="ub-f1  uinn uinn-al1">
+						<input name="onePwd" placeholder="请输入交易密码" nextfocus="twoPwd"
+							title="交易密码" id="onePwd"
+							validator="notEmpty;reg[<%=txPwdRegex%>];"
+							type="password" maxlength="18" class="uc-a02">
+					</div>
+					<div class=" b-image-hide" action="action:lookPwd"> </div>
+				</div>
+			</div>
+			<div class="pd-lr-5 line-h-20 fn-s-11 fn-c-blue" id="passwordReg"><%=txPwdContent%></div>
+			<div class="ub ub-ac ub-pc umar-a1 c-orange uc-a02" id="setTranPwd">
+				<div class=" ub ub-ac ub-pc uinnh5 t-wh c-orange  ulev-app4">提 交</div>
+			</div>
+		</div>
+	</div>
+</div>

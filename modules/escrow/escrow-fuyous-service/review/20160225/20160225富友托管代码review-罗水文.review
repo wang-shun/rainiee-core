@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Review id="20160225富友托管代码review">
+  <ReviewIssue id="IL8V63ID">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 11:37:44:773 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:22:30:969 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="36">src/main/java/com/dimeng/p2p/console/servlets/fuyou/FyouXxczshtg.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>无类注释</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL92V7MQ">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 15:13:13:826 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:22:02:680 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="43">src/main/java/com/dimeng/p2p/pay/servlets/fuyou/ret/WithdrawNotice.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>noticeMessage变量只有一处使用可以直接使用</Summary>
+    <Description>noticeMessage</Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL932BXK">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 15:18:45:992 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:21:47:978 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="54">src/main/java/com/dimeng/p2p/escrow/fuyou/util/HttpClientHandler.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>公共方法参数可以打印出来  方便查找问题</Summary>
+    <Description>params</Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL936E56">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 15:21:55:482 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:21:37:787 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="41">src/main/java/com/dimeng/p2p/escrow/fuyou/task/BidTask.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>网络异常建议打印日志</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.closed</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL939O6E">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 15:24:28:454 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:20:50:419 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="74">src/main/java/com/dimeng/p2p/escrow/fuyou/service/PublicManage.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>多余注释</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL93GXWI">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 15:30:07:650 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:20:43:676 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="203">src/main/java/com/dimeng/p2p/escrow/fuyou/executor/FYTenderConfirmExecutor.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>return前打印日志  方便查看程序逻辑</Summary>
+    <Description> return;</Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL96104G">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 16:41:42:880 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:19:47:385 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="1">src/main/java/com/dimeng/p2p/escrow/fuyou/entity/console/TxdzEntity.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>无注释</Summary>
+    <Description></Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.resolved</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL967OHU">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 16:46:54:402 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-02 :: 15:57:55:477 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>邓文武</AssignedTo>
+    <File line="2">src/main/java/com/dimeng/p2p/console/servlets/finance/fuyou/dzgl/package-info.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>没有用到吧</Summary>
+    <Description>dzgl</Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.invalidWontfix</Resolution>
+    <Status>item.status.label.open</Status>
+  </ReviewIssue>
+  <ReviewIssue id="IL96F4YO">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-01 :: 16:52:42:336 CST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2016-03-03 :: 15:18:19:031 CST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>罗水文</ReviewerId>
+    <AssignedTo>何石平</AssignedTo>
+    <File line="69">src/main/java/com/dimeng/p2p/escrow/fuyou/achieve/BidFaceMagageImp.java</File>
+    <Type>item.type.label.optimization</Type>
+    <Severity>item.severity.label.minor</Severity>
+    <Summary>重写方法未做任何修改  可去除</Summary>
+    <Description>Exception</Description>
+    <Annotation></Annotation>
+    <Revision></Revision>
+    <Resolution>item.resolution.label.validNeedsfixing</Resolution>
+    <Status>item.status.label.closed</Status>
+  </ReviewIssue>
+</Review>

@@ -1,0 +1,39 @@
+	<%for(var i=0;i<data.length;i++){%>
+	<div class="ub ub-ac bc-withe mg-t-10">
+		<div class="raise-l fn-s-9 tx-va-b" ><font class="fn-s-15"><%=data[i].rate*1%></font>%加息券
+		</div>
+		<div class="ub-f1 raise-r ">
+		<div class="ub">
+		<div class="raise-c  ub-f1" >
+			<div class="line-h-15 fn-s-12"><%=!isNaN(data[i].investUseRule*1)&&data[i].investUseRule*1>0 ? '投满'+(data[i].investUseRule*1).toFixed(0)+'元可使用' :'无限制' %></div>
+			<div class="pd-bt-5">
+			<%if(data[i].status=='WSY'){%>
+			<div class=" width37 tx-al-c fn-s-13 exp-more fn-c-blue" action="index/index/projectInvestment" style="position: absolute;right: 0px;top:-5px;">
+			去投资
+			</div>
+			<%}%>
+			</div>
+			<div class="ub">
+				<div class="line-h-15  fn-s-12 "><%=data[i].type%></div>
+				<div  class=" ub-f1 fn-s-12 fn-c tx-al-r line-h-10"   >
+					过期时间：<%=data[i].timeOut%>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		
+		
+		</div>
+		<!--<div class="raise-b">132321</div>-->
+		</div>
+		<%if(data[i].status=='WSY'){%>
+		<span class="exp-r-org">未使用</span>
+		<%}if(data[i].status=='YSY'){%>
+		<span class="exp-r-gray">已使用</span>
+		<%}if(data[i].status=='YGQ'){%>
+		<span class="exp-r-gray">已过期</span>
+		<%}%>
+	</div>
+	<%}%>

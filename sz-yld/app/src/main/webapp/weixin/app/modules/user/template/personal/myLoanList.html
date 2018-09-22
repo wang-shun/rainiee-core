@@ -1,0 +1,169 @@
+
+	<!--还款中-->
+	<%if(loansType==1){%>
+		<%for(var i=0;i<data.length;i++){%>
+			<div class=" c-wh   b-top-bottom umar-ab1 lus-b  umar-at Jdc"   bidid="<%=data[i].bidId%>"  >
+			<div class="ufclear"  data-id="<%=data[i].bidId%>">
+				<div class="width100 ufl  uinn-ab1 pos-relative uinn-6">
+					<div class=" ub umar-ar6  uinn-a7 umar-at">
+						<div class=" ulev-18 c-gray  t-3 uinn-a1-center ub-f1"><%=data[i].bidTitle%></div>
+						<div class=" fn-s-12 fn-c-blue"><%=data[i].status%></div>
+					</div>
+		
+					<div class=" ub ub-f1 umar-ar6 uinn-a7 umar-top ub-ac ">
+						<div class=" ub ub-ver width90">
+							<div class=" ulev-app15 ub ">
+								
+								<span class="ub ub-f1 ub-ac  tx-c f-red ">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=(data[i].rate*100).toFixed(2)%></span><span class="ulev-app2">%</span></li>
+											<li class="t-a ulev-app2">年化利率</li>
+				                           
+										</ul>
+								</span>
+								<span class="ub  ub-ac ub-f1 tx-c c-black ub-pc">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=DMJS.changeAmount(data[i].totalAmount)%></span><span class="fn-s-11 fn-c-gray">元</span></li>
+								            <li class="t-a ulev-app2">借款金额</li>
+			                                
+			                            </ul>
+		                        </span>
+		                        <span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+			                            <ul>
+			                                <li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=DMJS.changeAmount(data[i].curBackAmount)%></span><span class="fn-s-11 fn-c-gray">元</span></li>
+			                                <li class="t-a ulev-app2">还款总额</li>
+										</ul>
+								</span>
+							</div>
+						</div>
+						<%if(!(data[i].status=='申请中'||data[i].status=='已流标')){%>
+						<div class="img-more mg-l-10"></div>
+						<%}%>
+					</div>
+					<div class=" ub umar-ar6  uinn-a7 umar-at fn-c">
+						<span class="ulev-app2">期数：
+							<%=data[i].backTerm%>/<%=data[i].totalTerm%>
+						</span><span class="ulev-app2 mg-l-20">下个还款日期：<%=data[i].backTime%></span>
+					</div>
+				</div>
+			</div>
+			<ul class="b-top ufclear ub  ulev-app13 uinn-al8 fn-c-blue uinn-a23 tx-al-c">
+				
+				<li class="ub-f1 "><div  action="action:repayEnd[<%=data[i].forwardRepayInfo.loanID%>,<%=data[i].forwardRepayInfo.accountAmount%>,<%=data[i].forwardRepayInfo.loanManageAmount%>,<%=data[i].forwardRepayInfo.loanMustMoney%>,<%=data[i].forwardRepayInfo.loanPenalAmount%>,<%=data[i].forwardRepayInfo.loanTotalMoney%>,<%=data[i].forwardRepayInfo.number%>,<%=data[i].forwardRepayInfo.sybj%>,<%=data[i].forwardRepayInfo.sylx%>,<%=data[i].isPrepayment%>]">
+					提前还款</div></li>
+					
+				<li class="ub-f1"><div action="action:repay[<%=data[i].repayInfo.loanID%>,<%=data[i].repayInfo.loanMustMoney%>,<%=data[i].repayInfo.loanArrMoney%>,<%=data[i].repayInfo.number%>]">还款</div></li>
+				<li class="ub-f1"><div action="user/personal/viewContract/<%=data[i].bidId%>">查看合同</div></li>
+				<li class="ub-f1"><div action="user/personal/myLoanInfo/<%=data[i].bidId%>">还款详情</div></li>
+			</ul>
+			</div>
+			<%}}if(loansType==2){%>
+<!--已结清-->			
+			<%for(var i=0;i<data.length;i++){%>
+			<div class=" c-wh   b-top-bottom umar-ab1 lus-b  umar-at"   bidid="<%=data[i].bidId%>"  >
+			<div class="ufclear" data-id="<%=data[i].bidId%>" >
+				<div class="width100 ufl  uinn-ab1 pos-relative uinn-6">
+					<div class=" ub umar-ar6  uinn-a7 umar-at">
+						<div class=" ulev-18 c-gray  t-3 uinn-a1-center ub-f1"><%=data[i].bidTitle%></div>
+						<div class=" fn-s-12 fn-c-blue"><%=data[i].status%></div>
+					</div>
+					<div class=" ub ub-f1 umar-ar6 uinn-a7 umar-top ub-ac ">
+						<div class=" ub ub-ver width90">
+							<div class=" ulev-app15 ub ">
+								
+								<span class="ub ub-f1 ub-ac  tx-c f-red ">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=(data[i].rate*100).toFixed(2)%></span><span class="ulev-app2">%</span></li>
+											<li class="t-a ulev-app2">年化利率</li>
+				                           
+										</ul>
+								</span>
+								<span class="ub  ub-ac ub-f1 tx-c c-black ub-pc">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=DMJS.changeAmount(data[i].totalAmount)%></span><span class="fn-s-11 fn-c-gray">元</span></li>
+								            <li class="t-a ulev-app2">借款金额</li>
+			                                
+			                            </ul>
+		                        </span>
+		                        <span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+			                            <ul>
+			                                <li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=DMJS.changeAmount(data[i].totalBackAmount)%></span><span class="fn-s-11 fn-c-gray">元</span></li>
+			                                <li class="t-a ulev-app2">还款总额</li>
+										</ul>
+								</span>
+							</div>
+						</div>
+						<%if(!(data[i].status=='申请中'||data[i].status=='已流标')){%>
+						<div class="img-more mg-l-10"></div>
+						<%}%>
+					</div>
+					<div class=" ub umar-ar6  uinn-a7 umar-at fn-c">
+						<span class="ulev-app2">期限：
+							<%=data[i].theterm%><%=data[i].isDay=="S" ?  '天' : '个月'%>
+						</span><span class="ulev-app2 mg-l-30">还清日期：<%=data[i].cleanTime%></span>
+					</div>
+				</div>
+			</div>
+			
+			<ul class="b-top ufclear ub  ulev-app13 uinn-al8 fn-c-blue uinn-a23 tx-al-c">
+				<%if(data[i].status=='还款中'){%>
+				<li class="ub-f1 "><div  action="action:repayEnd[<%=data[i].forwardRepayInfo.loanID%>,<%=data[i].forwardRepayInfo.accountAmount%>,<%=data[i].forwardRepayInfo.loanManageAmount%>,<%=data[i].forwardRepayInfo.loanMustMoney%>,<%=data[i].forwardRepayInfo.loanPenalAmount%>,<%=data[i].forwardRepayInfo.loanTotalMoney%>,<%=data[i].forwardRepayInfo.number%>,<%=data[i].forwardRepayInfo.sybj%>,<%=data[i].forwardRepayInfo.sylx%>]">
+					提前还款</div></li>
+				<li class="ub-f1"><div action="action:repay[<%=data[i].repayInfo.loanID%>,<%=data[i].repayInfo.loanMustMoney%>,<%=data[i].repayInfo.loanArrMoney%>,<%=data[i].repayInfo.number%>]">还款</div></li>
+				<li class="ub-f1"><div  action="user/personal/viewContract/<%=data[i].bidId%>">查看合同</div></li>
+				<li class="ub-f1"><div action="user/personal/myLoanInfo/<%=data[i].bidId%>">还款详情</div></li>
+				<%}%>
+			</ul>
+			
+			</div>
+			<%}}if(loansType==4){%>
+				<%for(var i=0;i<data.length;i++){%>
+			<!--已转让-->
+			<div class=" c-wh   b-top-bottom umar-ab1 lus-b  umar-at"   bidid="<%=data[i].bidId%>"  >
+			<div class="ufclear" data-id="<%=data[i].bidId%>" >
+				<div class="width100 ufl  uinn-ab1 pos-relative uinn-6">
+					<div class=" ub umar-ar6  uinn-a7 umar-at">
+						<div class=" ulev-18 c-gray  t-3 uinn-a1-center ub-f1"><%=data[i].bidTitle%></div>
+						
+					</div>
+					<div class=" ub ub-f1 umar-ar6 uinn-a7 umar-top ub-ac ">
+						<div class=" ub ub-ver width90">
+							<div class=" ulev-app15 ub ">
+								
+								<span class="ub ub-f1 ub-ac  tx-c f-red ">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=(data[i].rate*100).toFixed(2)%></span><span class="ulev-app2">%</span></li>
+											<li class="t-a ulev-app2">年化利率</li>
+				                           
+										</ul>
+								</span>
+								<span class="ub  ub-ac ub-f1 tx-c c-black ub-pc">
+			                            <ul>
+			                            	<li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=DMJS.changeAmount(data[i].totalAmount)%></span><span class="fn-s-11 fn-c-gray">元</span></li>
+								            <li class="t-a ulev-app2">借款金额</li>
+			                                
+			                            </ul>
+		                        </span>
+		                        <span class="ub ub-f1 ub-ac  tx-c c-black ub-pe pos-relative">
+			                            <ul>
+			                                <li class="ulev-app2 t-3"><span class="fn-c-org ulev-app4"><%=DMJS.changeAmount(data[i].transferAmount)%></span><span class="fn-s-11 fn-c-gray">元</span></li>
+			                                <li class="t-a ulev-app2">转让金额</li>
+										</ul>
+								</span>
+							</div>
+						</div>
+						
+					</div>
+					<div class=" ub umar-ar6  uinn-a7 umar-at fn-c">
+						<span class="ulev-app2">转让期限：
+							<%=data[i].backTerm%>/<%=data[i].totalTerm%>
+						</span><span class="ulev-app2 mg-l-30">转让日期：<%=data[i].transferDate%></span>
+					</div>
+				</div>
+			</div>
+			
+			<ul class="b-top ufclear ub  ulev-app13 uinn-al8 fn-c-blue uinn-a23 tx-al-c">
+			</ul>
+			</div>
+			<%}}%>
+			

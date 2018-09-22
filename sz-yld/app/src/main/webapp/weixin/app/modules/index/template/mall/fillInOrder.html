@@ -1,0 +1,62 @@
+<div id="" class="fn-s-14">
+	<div class="address ub" action="action:gotoAddress">
+		     <%if(defaultAddress.address){%>
+			 <div class="ub pd-all-10 fn-s-15 ub-ver width90">
+			 	<div class="ub ">
+			 		<div class="width50 ub"><div class="img-adres-user"></div><div class="c-black"><%=defaultAddress.name.length>7?defaultAddress.name.substring(0,7)+"...":defaultAddress.name%></div></div>
+				 	<div class="width50 ub"><div class="img-adres-phone"></div><div class="c-black"><%=defaultAddress.phone%></div></div>
+			 	</div>
+			 	<div class="ub fn-s-14 mg-t-5" style="width: 100%;">
+			 		<%if("yes"==defaultAddress.yesOrNo){%>
+			 			<span class="btm-clr-1 fn-c-white hei-15 pd-lr-05" style="border-radius: 0.3em;">默认</span>
+			        <%}%>
+					<%=defaultAddress.address%>
+			 	</div>
+			 	
+			 </div>
+			 <%}else{%>
+			 	<div class="hei-50 ub ub-ac ub-pc fn-s-17 width90">您还未建立收货地址</div>
+			 <%}%>
+			  <div class="ub ub-ac ub-pc">
+			 	<div class="img-more"></div>
+			 </div>
+	</div>
+	
+	<div class="bc-withe"  style="margin-top:1rem;">
+		<%for(var i = 0; i < scoreMall.length; i++){%>
+		<div class="ub bd-t pd-all-8" >
+			<div class="mallproduct" style='<%=scoreMall[i].image?"background-image:url("+scoreMall[i].image+")":""%>;'></div>
+			<div class="ub ub-ver pd-l-10 ub-f1">
+				<div class="ub t-3"><%=scoreMall[i].name%></div>
+				<div class="ub ub-ac ub-f1 ">
+					 <div class="fn-c-org ub-f1">
+						<%if("score"==payType){%>
+							积分 : <%=scoreMall[i].score%>
+						<%}else{%>	
+							¥<%=scoreMall[i].amount%>
+						<%}%>
+					 </div>
+					 <span>x<%=scoreMall[i].selectedNum%></span>
+				</div>
+			    <div class="ub">	
+					<div class="t-6 ub-f1">库存 : <%=scoreMall[i].stock%></div>
+				</div>
+			</div>
+		</div>
+		<%}%>
+		<!--共计-->
+		<div class="ub ub-ac hei-30 pd-all-8">
+			<div class="ub width50 ub-pe t-6">共<%=goodsSum%>件商品</div>
+			<div class="ub fn-c-org width50 ub-pe">
+				<%if("score"==payType){%>
+					所需积分: <%=totalValue%>积分
+				<%}else{%>	
+					总价: ¥<%=totalValue%>
+				<%}%>
+			</div>
+		</div>
+	</div>
+	
+</div>   	
+	 
+

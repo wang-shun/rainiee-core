@@ -1,0 +1,81 @@
+<div id="" class="fn-s-14 c-e">
+	<%if(list.address){%>
+	<div class="address ub">
+				<div class="ub ub-f1 pd-all-10 pd-b-20 fn-s-15 ub-ver">
+				 	<div class="ub ">
+				 		<div class="width50 ub"><div class="img-adres-user"></div><div class="c-black"><%=list.buyer.length > 7?(list.buyer).substring(0,7)+"...":list.buyer%></div></div>
+					 	<div class="width50 ub ub-pe"><div class="img-adres-phone"></div><div class="c-black"><%=list.telephone%></div></div>
+				 	</div>
+				 	<div class="ub fn-s-14" style="width: 100%;">
+				 		<div class="order-address"></div>
+				 		<div class="ub ub-f1"><%=list.address%></div>
+				 	</div>
+				 </div>
+	</div>
+	<%}else{%>	
+		<div class="fn-s-15 bc-withe" style="padding: 1rem 0rem 1rem 1rem;">
+			<span class="t-3">充值号码: </span>
+			<span class="fn-c-org"><%=list.telephone%></span>
+		</div>
+	<%}%>
+	
+	<%for(var i=0;i<orderList.length;i++){%>
+	<div class="bc-withe"  style="margin-top:1rem;">
+		<div class="ub bd-t pd-all-8 ub-ver" >
+			<div class="t-3 hei-30 ub ub-ac bd-t">订单号：<%=orderList[i].orderId%></div>
+			<%for(var j=0;j<orderList[i].myOrderExtInfos.length;j++){%>
+			<div class="ub t-3" style="margin: 1rem 0;">
+				<div class="mallproduct" style='<%=orderList[i].myOrderExtInfos[j].comdPicture?"background-image:url("+orderList[i].myOrderExtInfos[j].comdPicture+")":""%>;'></div>
+				<div class="ub ub-ver pd-l-10 ub-f1 ">
+					<div class="ub">
+						<div class="ub-f1"><%=orderList[i].myOrderExtInfos[j].comdName%></div>
+						<span class="fn-c-org"><%=orderList[i].myOrderExtInfos[j].status%></span>
+					</div>
+					
+					<div class="ub ub-ac ub-pe ub-f1">
+						<%if("score"==orderList[i].myOrderExtInfos[j].payment){%>
+							<%=orderList[i].myOrderExtInfos[j].score%>积分
+						<%}else{%>	
+							¥<%=orderList[i].myOrderExtInfos[j].price%>
+						<%}%>
+					</div>
+				    <div class="ub">		
+						<div class="ub ub-pe ub-f1">x<%=orderList[i].myOrderExtInfos[j].num%></div>
+					</div>
+				</div>
+			</div>
+			<%}%>
+		</div>
+		<!--共计-->
+		<div class="ub ub-ver fn-s-13 pd-all-8">
+			<div class="ub  line-h-28">
+				<span class="fn-s-14 t-3">订单总价：</span>
+				<span class="fn-c-org"><%if("score"==orderList[i].payment){%>
+					<%=orderList[i].orderSumAmount%>积分
+				<%}else{%>	
+					¥<%=orderList[i].orderSumAmount%>
+				<%}%></span>
+			</div>
+			<div class="line-h-22">
+				 成交时间: <%=orderList[i].orderTime%>
+			</div>
+			<%if(orderList[i].myOrderExtInfos[0].status!="待审核"&&orderList[i].myOrderExtInfos[0].status!="待发货"&&orderList[i].dispatchDate){%>
+				<div class="line-h-22">
+				  发货时间: <%=orderList[i].dispatchDate%>
+			    </div>
+			<%}%>
+			<%if(orderList[i].logistics){%>
+				 <div class="line-h-22">
+				  	物流: <%=orderList[i].logistics%>
+				 </div>
+			<%}%>
+			<%if(orderList[i].logisticsOrderNum){%>
+				 <div class="line-h-22">
+				  	快递单号: <%=orderList[i].logisticsOrderNum%>
+				 </div>
+			<%}%>
+		</div>
+	</div>
+	<%}%>
+</div>   	
+

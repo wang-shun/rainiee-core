@@ -1,0 +1,36 @@
+<div class="bg-c-gray hei-inherit">
+	<div class="donation-tl ub">
+		<div class="img-icon8"></div>
+		<div class="line-h-25">可捐金额</div>
+	</div>
+	<div class="donation-ct">
+		<%=(donationsAmount*1).toFixed(2)%><span class="fn-s-12">元</span>
+	</div>
+	<div class="donation-ft">
+		<font class="fn-c">账户余额:&nbsp;</font><span class="fn-c-org"><%=(overAmount*1).toFixed(2)%></span><font class="fn-s-12">元</font>
+	</div>
+	<div class="donation-inp ub">
+		<div class="line-h-30  pd-bt-5">捐助金额:</div>
+		<div class="pd-all-5">
+			<input id="amount" title="捐助金额" name="amount" validator="notEmpty;reg[/^[0-9]{1,12}\.*[0-9]{0,2}$/]" placeholder="  起捐金额 <%=(donationsMinAmount*1).toFixed(2)%> 元" />
+		</div>
+	</div>
+	<%if(!tg){%>
+	<div class="donation-inp ub mg-t-3">
+		<div class="line-h-30 pd-bt-5">交易密码:</div>
+		<div class="pd-all-5">
+			<input id="tranPwd" type="password" title="交易密码" name="tranPwd" validator="" placeholder=" 请输入交易密码" />
+		</div>
+	</div>
+	<%}%>
+	<div class="ub umar-a2 ub-ac" id="agreementFlag">
+            <input type="checkbox"  class="uhide" title="请阅读公益捐助协议" validator="checked;" id="autid">
+            <div  class="ub t-bla ub-f1" style="width:7.5rem">
+                <div action="action:turnRememberRido" class="che-icon ub-img umhw2"></div>
+                <div class="ub-f1 ut-s tx-l t-gra ub ub-ac fn-s-12" style=" margin-left:.5rem;"  ><label for="autid">我已阅读并同意</label>《<div class="lc_red" action="action:agreement['GYB']">公益捐助协议</div>》</div>
+            </div>
+    </div>
+	<div class="ub ub-pc mg-t-20 fn-s-15" action="action:buy">
+		<div class="width98 tx-al-c pd-bt-10 radius bg-c-blue fn-c-white">马上捐助</div>
+	</div>
+</div>

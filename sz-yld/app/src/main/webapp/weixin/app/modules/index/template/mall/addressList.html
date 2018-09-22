@@ -1,0 +1,49 @@
+<!--收货地址列表-->
+<%if(countAddress > 0){%>
+	<%for(var i in list){%>
+	<%if(list[i].yesOrNo == "yes"){%>
+	<div class="ub JSMoveHOrs pd-t-10" addressId="<%=list[i].id%>">
+		<div class="ub ub-ver width95 pd-l-10 pd-r-10 bd-r bd-t" action="action:selectedAddress['<%=list[i].id%>']">
+			<div class="ub">
+				<div class="width50 ub">
+					<div class="img-adres-user"></div><span class="c-black"><%=list[i].name.length > 3?(list[i].name).substring(0,3)+"...":list[i].name%></span>
+				</div>
+				<div class="width50 ub">
+					<div class="img-adres-phone"></div><span class="c-black"><%=list[i].phone%></span>
+				</div>
+			</div>
+			<div class="ub ub-ac ub-f1 t-rb9 wordbreak-j">
+				<!--默认地址显示下面一行代码-->
+				<span class="btm-clr-1 fn-c-white hei-15 pd-lr-05" style="border-radius: 0.3em;">默认</span>
+				<%=list[i].region.replace(/,/g,"")%><%=list[i].address%>
+			</div>
+		</div>
+		<!--<div class="editAddress update bd-t" style="width: 50px;">
+		</div>-->
+		<div class="bg-c-org t-wh fn-s-15 tx-ac update" style="width: 70px;min-height: 5em;">编辑</div>
+		<div class="dele-bg t-wh fn-s-15 tx-ac delete" style="width: 70px;min-height: 5em;">删除</div>
+	</div>
+	<%}}%>
+<%for(var i in list){%>
+	<%if(list[i].yesOrNo == "no"){%>
+	<div class="ub JSMoveHOrs pd-t-10" addressId="<%=list[i].id%>">
+		<div class="ub ub-ver width95 pd-l-10 pd-r-10 bd-r bd-t" action="action:selectedAddress['<%=list[i].id%>']">
+			<div class="ub">
+				<div class="width50 ub">
+					<div class="img-adres-user"></div><span class="c-black"><%=list[i].name.length > 3?(list[i].name).substring(0,3)+"...":list[i].name%></span>
+				</div>
+				<div class="width50 ub">
+					<div class="img-adres-phone"></div><span class="c-black"><%=list[i].phone%></span>
+				</div>
+			</div>
+			<div class="ub ub-ac ub-f1 t-rb9 wordbreak-j">
+				<%=list[i].region.replace(/,/g,"")%><%=list[i].address%>
+			</div>
+		</div>
+		<!--<div class="editAddress update bd-t" style="width: 50px;">
+		</div>-->
+		<div class="bg-c-org t-wh fn-s-15 tx-ac update" style="width: 70px;min-height: 5em;">编辑</div>
+		<div class="dele-bg t-wh fn-s-15 tx-ac delete" style="width: 70px;min-height: 5em;">删除</div>
+	</div>
+	<%}%>
+<%}}%>
